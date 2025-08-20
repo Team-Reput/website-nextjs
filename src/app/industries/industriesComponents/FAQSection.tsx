@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { PlusIcon, MinusIcon } from "@heroicons/react/24/outline";
+import { useContact } from "../../components/ContactContext";
+
 
 const faqs = [
   {
@@ -35,6 +37,9 @@ const faqs = [
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+              const { scrollToContact } = useContact(); 
+  
+
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -47,7 +52,7 @@ export default function FAQSection() {
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-black">Frequently Asked Questions</h2>
           <p className="text-gray-600">
             For More Question About the carbon emission Tracking , please head{" "}
-            <a href="#" className="text-green-700 font-semibold underline">HERE</a>
+            <a onClick={scrollToContact}  className="text-green-700 font-semibold underline">HERE</a>
           </p>
         </div>
 

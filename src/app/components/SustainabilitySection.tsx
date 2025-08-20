@@ -6,32 +6,33 @@ import { motion } from "framer-motion";
 export default function SustainabilitySection() {
   const cards = [
     {
-      category: "Accreditations",
+      category: "Multiple Methods",
       title: "Global Recognition",
       description:
-        "Our platform is accredited by top global organizations ensuring unmatched credibility and transparency in sustainability reporting.",
-      images: ["/gri.png", "/sasb.png", "/pcaf.png", "/issb.png"],
+        "Our platform is built on proven methodologies and validated research. Every metric and report is anchored in robust data practices, ensuring accuracy, consistency, and trustworthiness for decision-making.",
+      // images: ["/gri.png", "/green.png", "/pcaf.png", "/issb.png"],
+      images: ["/defra.png", "/green.png"],
     },
     {
-      category: "Science-Based",
-      title: "Rooted in Science",
+      category: "Knowledge Leadership",
+      title: "Experts at the Core",
       description:
-        "Built on credible, peer-reviewed science adhering to international standards, ensuring accuracy and reliability in every report.",
-      images: ["/iso1.png", "/greenhouse.png", "/pcaf.png", "/defra.png"],
+        "Our team brings together sustainability strategists, engineers, and innovators with deep expertise across climate, energy, and technology domains.",
+      images: ["/goals4.png", "/bh3.png"],
     },
     {
       category: "Expert Team",
-      title: "Built By Climate Scientists",
+      title: "Globally Trusted Standards ",
       description:
-        "Created by scientists, researchers, and technologists with deep expertise in the sustainability sector from world-renowned institutions.",
-      images: ["/mit.png", "/standford.png", "/pcaf.png", "/issb.png"],
+        "Recognized for aligning with internationally accepted sustainability frameworks, we bring unmatched credibility and transparency—helping organizations meet compliance requirements while building trust with stakeholders.",
+      images: ["/sbt22.png", "/cii3.png"],
     },
     {
-      category: "Data Security & Privacy",
-      title: "Enterprise Security",
+      category: "Security First",
+      title: "Data You Can Trust",
       description:
-        "We provide a secure platform that protects all your data with the highest levels of data protection and privacy compliance.",
-      images: ["/iso2.png", "/iso3.png", "/iso4.png", "/soc2.png"],
+        "Your information is safeguarded with enterprise-grade systems designed for resilience, confidentiality, and compliance with the highest digital protection standards.",
+      images: ["/iso77.png", "/iso33.png"],
     },
   ];
 
@@ -78,8 +79,8 @@ export default function SustainabilitySection() {
                   key={i}
                   src={src}
                   alt="logo"
-                  width={70}
-                  height={70}
+                  width={120}
+                  height={120}
                   className="object-contain"
                 />
               ))}

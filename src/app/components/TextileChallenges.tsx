@@ -27,7 +27,7 @@ export default function TextileChallenges() {
       description:
         "Track carbon emissions across the value chain with blockchain-backed data. Empower reduction with verified insights and reporting.",
       img: "/dashb.png",
-      slug: "textile",
+      slug: "zerocarbon",
     },
     {
       title: "RePut",
@@ -35,7 +35,7 @@ export default function TextileChallenges() {
       description:
         "Build circular system with verified recycler networks, real-time recovery data and digital proof of impact.",
       img: "/carbon.png",
-      slug: "textile",
+      slug: "/circle",
     },
 
   ];

@@ -42,13 +42,13 @@ export default function PoliciesSection() {
         "This documented information is a policy documented information highlighting the policies for Sensitive Personal Data or Information (SPDI) and Personal Information management.",
       file: "/docs/Reput-Policy_SDPI.pdf",
     },
-    {
-      id: 5,
-      title: "Gender Policy",
-      description:
-        "Our Gender Policy outlines our commitment to promoting gender equality, equity, and inclusivity across all areas of our organization.",
-      file: "/docs/gender-Policy.pdf",
-    },
+    // {
+    //   id: 5,
+    //   title: "Gender Policy",
+    //   description:
+    //     "Our Gender Policy outlines our commitment to promoting gender equality, equity, and inclusivity across all areas of our organization.",
+    //   file: "/docs/gender-Policy.pdf",
+    // },
   ];
 
   const officers = [

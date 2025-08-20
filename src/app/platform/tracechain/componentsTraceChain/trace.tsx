@@ -59,7 +59,7 @@ export default function Trace() {
       {/* First Section */}
       <section className="h-screen relative overflow-hidden bg-gray-100">
         <div className="absolute top-[20%] left-1/2 -translate-x-1/2 text-center text-2xl">
-          <div className="flex items-center justify-center ml-10 bg-white rounded-[25px] px-2 py-1 w-70   outline-2 outline-gray-200">
+          <div className="flex items-center justify-center ml-18 mb-5 bg-white rounded-[25px] px-2 py-1 w-70   outline-2 outline-gray-200">
             <Image src="/rocket-icon.png" alt="Rocket Icon" width={20} height={20} />
             <p className="ml-2 text-black text-lg">AI Powered Technology</p>
           </div>
@@ -94,7 +94,7 @@ export default function Trace() {
       {/* Fourth Section */}
       <section className="h-screen flex justify-center items-center bg-gray-50">
         <div className="relative left-1/4 -translate-x-1/2 text-2xl text-[#29442C]">
-          <h1 className="text-sm mb-4 text-[#29442C] rounded-[40px] w-[100px] px-2 outline outline-1 outline-[#29442C]">
+          <h1 className="text-sm mb-4 text-[#29442C] rounded-[40px] w-[100px] px-2  outline-1 outline-[#29442C]">
             TraceChain
           </h1>
           <h5 className="mb-4">Trace Every Tier, Every Time</h5>
@@ -118,11 +118,11 @@ export default function Trace() {
         </div>
         <div className="flex  justify-center">
           <animated.div style={scrollSpringOurPlatform} className="w-[27%] text-center">
-            <Image src="/reput-circle.png" alt="RePut Circle" width={100} height={100} className="w-4/5 rounded-lg" />
+            <Image onClick={() => router.push(`/platform/circle`)} src="/reput-circle.png" alt="RePut Circle" width={100} height={100} className="w-4/5 rounded-lg" />
             <h3 className="mt-2 text-lg text-black  mr-15  font-bold">RePut Circle</h3>
           </animated.div>
           <animated.div style={scrollSpringOurPlatform} className="w-[27%] text-center">
-            <Image onClick={() => router.push(`/industries/carbon`)} src="/zero-carbon.png" alt="Zero Carbon" width={200} height={200} className="w-4/5 rounded-lg" />
+            <Image onClick={() => router.push(`/platform/zerocarbon`)} src="/zero-carbon.png" alt="Zero Carbon" width={200} height={200} className="w-4/5 rounded-lg" />
             <h3 className="mt-2 text-lg text-black  mr-15  font-bold">Zero Carbon</h3>
           </animated.div>
           {/* <animated.div style={scrollSpringOurPlatform} className="w-[27%] text-center">

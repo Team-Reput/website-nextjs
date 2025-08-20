@@ -4,8 +4,13 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useContact } from "../../components/ContactContext";
+
 
 export default function FeatureSection() {
+
+          const { scrollToContact } = useContact();
+  
   const features = [
     {
       highlight: "Protect your brand and assure your customers.",
@@ -110,9 +115,9 @@ export default function FeatureSection() {
               <ul className="mt-4 space-y-2 text-gray-700 list-disc list-inside">
                 {feature.points.map((point, i) => (
                   <li key={i}>{point}</li>
-                ))}
+                ))} 
               </ul>
-              <button className="mt-4 px-5 py-2 bg-green-500 text-white text-sm font-medium rounded hover:bg-green-600 transition">
+              <button  onClick={scrollToContact}  className="mt-4 px-5 py-2 bg-green-500 text-white text-sm font-medium rounded hover:bg-green-600 transition">
                 Learn More
               </button>
             </motion.div>

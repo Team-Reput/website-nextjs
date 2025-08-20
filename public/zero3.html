@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zero Carbon</title>
+  <style>
+    /* ================== GLOBAL CSS ================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      height: 100%;
+      overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+
+    /* First Section */
+    .sectionOne {
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      background-color: #f0f0f0;
+    }
+
+    .aiicon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 2.5em;
+      background-color: #FFFFFF;
+      border-radius: 25px;
+      padding: 5px;
+      width: 10em;
+      outline: 2px solid #E5E5E5;
+    }
+
+    .aiicon img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .aiicon p {
+      font-size: 1.2rem;
+      margin-left: 5px;
+      color: black;
+    }
+
+    .textOverlay {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .textOverlay h1 {
+      font-size: 56px;
+      margin-bottom: 1rem;
+      color: #29442C;
+    }
+
+    .textOverlay p {
+      font-size: 18px;
+      margin-bottom: 1rem;
+      color: #071030;
+    }
+
+    .description {
+      font-size: 16px;
+      width: 30em;
+      margin: 0 auto 20px auto;
+      color: #071030;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .textOverlay button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: #29442C;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .textOverlay button:hover {
+      background-color: #0056b3;
+    }
+
+    .imageWrapper {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30em;
+    }
+
+    .image {
+      width: 100%;
+      height: 60%;
+      object-fit: cover;
+    }
+
+    /* Second Section */
+    .sectionTwo {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .imageWrapperExpand {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .imageExpand {
+      width: 69%;
+      height: 65%;
+      object-fit: contain;
+      transition: all 1s ease-out;
+    }
+
+    /* Third Section */
+    .sectionThree {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f9f9f9;
+    }
+
+    .fullImageWrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .fullImage {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    /* Fourth Section */
+    .sectionFour {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f9f9f9;
+      padding: 2rem;
+    }
+
+    .textOverlay1 {
+      position: relative;
+      left: 25%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      color: #29442C;
+      max-width: 600px;
+      padding-right: 2rem;
+    }
+
+    .textOverlay1 h5 {
+      font-size: 1.5rem;
+      color: #29442C;
+      font-weight: 500;
+    }
+
+    .zerocarbon {
+      display: flex;
+      align-items: center;
+      background-color: #FFFFFF;
+      border-radius: 25px;
+      padding: 5px;
+      width: 5em;
+      outline: 2px solid #29442C;
+      justify-content: center;
+    }
+
+    .zerocarbon img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .point {
+      display: flex;
+      align-items: center;
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      margin-right: 15px;
+      object-fit: contain;
+    }
+
+    /* Our Platform */
+    .ourPlatform {
+      text-align: center;
+      padding: 50px 0;
+      background: linear-gradient(to bottom, #29442C 50%, #ffffff 50%);
+    }
+
+    .platformTitle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      color: white;
+      padding: 0 20px;
+    }
+
+    .rocketIcon {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      background-color: #FFFFFF;
+      border-radius: 25px;
+      padding: 5px;
+    }
+
+    .rocketIcon img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .platformItems {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .platformItem {
+      width: 30%;
+      text-align: center;
+    }
+
+    .platformItem img {
+      width: 80%;
+      border-radius: 10px;
+    }
+
+    /* Get In Touch */
+    .getInTouch {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      background-color: #fff;
+    }
+
+    .contactForm {
+      width: 50%;
+    }
+
+    .contactcarbon {
+      display: flex;
+      align-items: center;
+      background-color: #FFFFFF;
+      border-radius: 25px;
+      padding: 5px;
+      width: 8em;
+      outline: 2px solid #29442C;
+      justify-content: center;
+    }
+
+    .contactForm h2 {
+      font-size: 56px;
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+
+    .contactForm form input,
+    .contactForm form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contactForm form button {
+      padding: 10px 20px;
+      background-color: #29432C;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .contactImage {
+      width: 40%;
+    }
+
+    .contactImage img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .social-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #29432C;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      outline: 3px solid #AEAFB2;
+    }
+
+    .social-icons a.linkedin {
+      background-image: url('/linkedin-icon.png');
+      background-repeat: no-repeat;
+      background-size: 50%;
+    }
+
+    .social-icons a.youtube {
+      background-image: url('/youtube-icon.png');
+      background-repeat: no-repeat;
+      background-size: 57%;
+    }
+
+    .social-icons a.instagram {
+      background-image: url('/instagram-icon.png');
+      background-repeat: no-repeat;
+      background-size: 57%;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .sectionFour {
+        flex-direction: column;
+      }
+      .platformItems {
+        flex-direction: column;
+      }
+      .getInTouch {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- First Section -->
+  <section class="sectionOne">
+    <div class="textOverlay">
+      <div class="aiicon">
+        <img src="/rocket-icon.png" alt="Rocket Icon"/>
+        <p>AI Powered Technology</p>
+      </div>
+      <h1>ZERO Carbon</h1>
+      <p>All Your ESG & Compliance Needs — Effortlessly Handled</p>
+      <span class="description">The same traceability that builds trust also powers seamless ESG reporting.</span>
+      <button>Request a demo</button>
+    </div>
+    <div class="imageWrapper">
+      <img src="/net-zero.png" alt="Net Zero" class="image"/>
+    </div>
+  </section>
+
+  <!-- Second Section -->
+  <section class="sectionTwo">
+    <div class="imageWrapperExpand">
+      <img src="/net-zero.png" alt="Net Zero" class="imageExpand"/>
+    </div>
+  </section>
+
+  <!-- Third Section -->
+  <section class="sectionThree">
+    <div class="fullImageWrapper">
+      <img src="/netzero-bg.png" alt="Net Zero" class="fullImage"/>
+    </div>
+  </section>
+
+  <!-- Fourth Section -->
+  <section class="sectionFour">
+    <div class="textOverlay1">
+      <div class="zerocarbon">
+        <img src="/rocket-icon.png" alt="Rocket Icon"/>
+        <p>ZERO Carbon</p>
+      </div>
+      <div class="point">
+        <img src="/ai-driven.png" alt="AI Icon" class="icon"/>
+        <div>
+          <h5>AI-Driven Hot Spots</h5>
+          <p>Detect and address risk areas instantly with predictive analytics.</p>
+        </div>
+      </div>
+      <div class="point">
+        <img src="/data-icon.png" alt="Data Icon" class="icon"/>
+        <div>
+          <h5>Faster Data Collection</h5>
+          <p>RePut reduces ESG data collection time, freeing resources.</p>
+        </div>
+      </div>
+    </div>
+    <div class="imageWrapperExpand">
+      <img src="/section-4-zero.png" alt="Zero Carbon" class="imageExpand"/>
+    </div>
+  </section>
+
+  <!-- Our Platform -->
+  <section class="ourPlatform">
+    <div class="platformTitle">
+      <div class="rocketIcon">
+        <img src="/rocket-icon.png" alt="Rocket Icon"/>
+        <p>RePut.ai</p>
+      </div>
+      <h2>Our Platform</h2>
+    </div>
+    <div class="platformItems">
+      <div class="platformItem">
+        <img src="/trace-chain.png" alt="Zero Carbon"/>
+        <h3>Tracechain</h3>
+      </div>
+      <div class="platformItem">
+        <img src="/reput-circle.png" alt="RePut Circle"/>
+        <h3>RePut Circle</h3>
+      </div>
+      <div class="platformItem">
+        <img src="/flex-dpp.png" alt="Flex-DPP"/>
+        <h3>Flex-DPP</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get In Touch -->
+  <section class="getInTouch">
+    <div class="contactForm">
+      <div class="contactcarbon">
+        <img src="/rocket-icon.png" alt="Rocket Icon"/>
+        <span class="contact-us">Contact Us</span>
+      </div>
+      <h2>Get In Touch</h2>
+      <p>We’re here to help you elevate your business.</p>
+      <form>
+        <input type="text" placeholder="Enter your name"/>
+        <input type="email" placeholder="e.g. johndoe@gmail.com"/>
+        <textarea placeholder="Type your message..."></textarea>
+        <button type="submit">Submit</button>
+        <p class="contact-desc">By clicking Submit, you agree to our Terms.</p>
+      </form>
+    </div>
+    <div class="contactImage">
+      <img src="/zero-carbon-contact.png" alt="Contact"/>
+      <div class="social-icons">
+        <p>Have a question or need expert guidance? We’re here to help.</p>
+        <div class="links">
+          <!-- <a href="https://www.linkedin.com" target="_blank" class="linkedin"></a> -->
+          <!-- <a href="https://www.youtube.com" target="_blank" class="youtube"></a> -->
+          <!-- <a href="https://www.instagram.com" target="_blank" class="instagram"></a> -->
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

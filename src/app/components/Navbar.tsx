@@ -116,8 +116,9 @@ const resourcesItems = [
 
 const platformItems = [
   { label: "Tracechain", href: "/platform/tracechain", image: "/chain.png" },
-  { label: "Zero Carbon", href: "/industries/carbon", image: "/e.png" },
-  // { label: "RePut Circle", href: "/platform/reput-circle", image: "/rc.png" },
+  // { label: "Zero Carbon", href: "/industries/carbon", image: "/e.png" },
+  { label: "Zero Carbon", href: "/platform/zerocarbon", image: "/e.png" },
+  { label: "RePut Circle", href: "/platform/circle", image: "/rc.png" },
   // { label: "Inviselable", href: "/platform/inviselable", image: "/qrc.png" },
   // { label: "Flex-DPP", href: "/platform/flex-dpp", image: "/flexdpp.png" },
   // { label: "Smart labelling", href: "/platform/smart-labelling", image: "/rec.png" }
@@ -231,6 +232,8 @@ export default function Navbar() {
         </button>
 
       </nav>
+
+      
     </header>
   );
 }

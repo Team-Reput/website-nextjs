@@ -33,7 +33,7 @@ export default function FoodFAQSection() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-            const { scrollToContact } = useContact();
+            const { scrollToContact } = useContact(); 
   
 
   return (

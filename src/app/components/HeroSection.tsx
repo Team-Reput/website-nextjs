@@ -6,6 +6,8 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import { ReactTyped } from "react-typed";
 import Typed from "typed.js";
 import { AnimatePresence, motion } from "framer-motion";
+import { useContact } from "../components/ContactContext";
+
 
 import AnimatedOctagon from "./AnimatedOctagon"; // <-- updated to fill parent
 import Globe3D from "./Globe3D";                 // <-- updated to fill parent
@@ -15,6 +17,8 @@ type Visual = "octagon" | "globe" | "compliance";
 
 export default function HeroSection() {
   const backgroundImage = "/homeBack.png";
+  const { scrollToContact } = useContact();
+
 
   const leftContents = [
     {
@@ -99,17 +103,17 @@ export default function HeroSection() {
                 showCursor={false}
                 // onStringTyped={handleStringTyped}
                 preStringTyped={handleStringTyped}
-                
+                 
               />
             </span>{" "}
             <span className="text-black">{content.subHeading}</span>
           </h1>
 
-          <p className="text-[16px] leading-[24px] text-black max-w-[520px]">
+          <p className="text-[16px] leading-[24px] text-[#3F3F40] max-w-[520px] font-bold">
             {content.description}
           </p>
 
-          <button className="bg-[#6FFFA9] hover:bg-[#5de997] transition text-black px-[20px] py-[10px] rounded shadow-md font-semibold flex items-center gap-2 w-fit">
+          <button  onClick={scrollToContact}  className="bg-[#6FFFA9] hover:bg-[#5de997] transition text-black px-[20px] py-[10px] rounded shadow-md font-semibold flex items-center gap-2 w-fit">
             See RePut in action →
           </button>
         </div>

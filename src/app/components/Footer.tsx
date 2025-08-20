@@ -288,7 +288,7 @@ export default function Footer() {
                  {/* Technologies 1 */}
           <div>
             <hr className="border-gray-600 my-6" />
-            <h3 className="mb-4 font-semibold">Technologies</h3>
+            <h3 className="mb-4 font-semibold">Features</h3>
             <ul className="space-y-2 text-sm">
               <li>Supply chain mapping</li>
               <li>Transaction traceability</li>
@@ -299,22 +299,29 @@ export default function Footer() {
           </div>
 
           {/* Regulatory Solutions */}
-          <div className="ml-55" >
+          <div className="ml-45 " >
             <hr className="border-gray-600 my-6" />
             <h3 className="mb-4 font-semibold">Regulatory Solutions</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                America
+                USA
                 <ul className="ml-4 list-disc">
-                  <li>Regulation 1</li>
-                  <li>Regulation 2</li>
+                  <li>Federal Acquisition Regulation (FAR) – Supplier compliance</li>
+                  <li>Dodd-Frank Act – Conflict Minerals Rule</li>
                 </ul>
               </li>
               <li>
                 India
                 <ul className="ml-4 list-disc">
-                  <li>Regulation 1</li>
-                  <li>Regulation 2</li>
+                  <li>Companies Act, 2013 – CSR & ESG compliance</li>
+                  <li>SEBI Business Responsibility and Sustainability Report (BRSR)</li>
+                </ul>
+              </li>
+              <li>
+                Europe
+                <ul className="ml-4 list-disc">
+                  <li>EU Supply Chain Due Diligence Directive (CSDDD)</li>
+                  <li>EU Taxonomy Regulation</li>
                 </ul>
               </li>
             </ul>
@@ -327,9 +334,9 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>Blog</li>
               <li>Customer Stories</li>
-              <li>Webinar / Videos / Podcasts</li>
-              <li>Ebooks</li>
-              <li>Events</li>
+              {/* <li>Webinar / Videos / Podcasts</li> */}
+              {/* <li>Ebooks</li> */}
+              {/* <li>Events</li> */}
             </ul>
           </div>
         </div>
@@ -347,7 +354,7 @@ export default function Footer() {
           <div></div>
           {/* Technologies 2 */}
           <div>
-            <hr className="border-gray-600 my-6" />
+            <hr className="border-gray-600 my-6 mr-20" />
 
             <h3 className="mb-4 font-semibold">Technologies</h3>
             <ul className="space-y-2 text-sm">
@@ -367,14 +374,22 @@ export default function Footer() {
             <hr className="border-gray-600 my-6" />
 
             <h3 className="mb-4 font-semibold">Company</h3>
-            <ul className="space-y-2 text-sm">
+            {/* <ul className="space-y-2 text-sm">
               <li>Compliance</li>
-              <li>Platform</li>
+              <li id="platform">Platform</li>
               <li>Industries</li>
               <li>Why RePut</li>
               <li>Company</li>
               <li>Join US</li>
-            </ul>
+            </ul> */}
+            <ul className="space-y-2 text-sm">
+    <li><a href="#" className="hover:text-green-400">Compliance</a></li>
+    <li><a href="#" className="hover:text-green-400">Platform</a></li>
+    <li><a href="#" className="hover:text-green-400">Industries</a></li>
+    <li><a href="#" className="hover:text-green-400">Why RePut</a></li>
+    <li><a href="#" className="hover:text-green-400">Company</a></li>
+    <li><a href="#" className="hover:text-green-400">Join Us</a></li>
+  </ul>
           </div>
         </div>
 
@@ -394,3 +409,6 @@ export default function Footer() {
     </footer>
   );
 }
+
+
+ 
