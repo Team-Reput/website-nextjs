@@ -1,0 +1,279 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Realistic 3D Globe</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: transparent; /* fully transparent */
+      display: grid;
+      place-items: center;
+    }
+    canvas { width: 100%; height: 100%; display: block; }
+  </style>
+</head>
+<body>
+  <canvas id="globeCanvas"></canvas>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    const canvas = document.getElementById('globeCanvas');
+
+    // ✅ Transparent renderer
+    const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+    renderer.setClearColor(0x000000, 0); // transparent
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+    camera.position.z = 2.5;
+
+    function resize() {
+      const { clientWidth: w, clientHeight: h } = canvas;
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+    }
+    window.addEventListener('resize', resize);
+
+    // ❌ REMOVE starfield code completely
+    // (no stars, no background)
+
+    // Globe + clouds
+    const loader = new THREE.TextureLoader();
+   
+    const globeMat = new THREE.MeshStandardMaterial({ bumpScale: 0.05, metalness: 0.1, roughness: 0.8 });
+    const globe = new THREE.Mesh(new THREE.SphereGeometry(1, 64, 64), globeMat);
+    scene.add(globe);
+
+    const cloudsMat = new THREE.MeshStandardMaterial({ transparent: true, opacity: 0.6, blending: THREE.AdditiveBlending });
+    const clouds = new THREE.Mesh(new THREE.SphereGeometry(1.01, 64, 64), cloudsMat);
+    scene.add(clouds);
+
+    loader.load('https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/earth_atmos_2048.jpg', t => { globeMat.map = t; globeMat.needsUpdate = true; });
+    loader.load('https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/earth_bump_2048.jpg', t => { globeMat.bumpMap = t; globeMat.needsUpdate = true; });
+    loader.load('https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/earth_clouds_1024.png', t => { cloudsMat.map = t; cloudsMat.needsUpdate = true; });
+
+    // Lights
+    scene.add(new THREE.AmbientLight(0x404040, 0.6));
+
+
+
+    const dir = new THREE.DirectionalLight(0xffffff, 2.2);
+    dir.position.set(5, 3, 5);
+    scene.add(dir);
+
+    // Drag rotate
+    let dragging = false, prev = { x: 0, y: 0 };
+    const speed = 0.005;
+    canvas.addEventListener('mousedown', e => { dragging = true; prev = { x: e.clientX, y: e.clientY }; });
+    window.addEventListener('mouseup', () => (dragging = false));
+    canvas.addEventListener('mousemove', e => {
+      if (!dragging) return;
+      const dx = e.clientX - prev.x, dy = e.clientY - prev.y;
+      globe.rotation.y += dx * speed; globe.rotation.x += dy * speed;
+      clouds.rotation.y += dx * speed; clouds.rotation.x += dy * speed;
+      prev = { x: e.clientX, y: e.clientY };
+    });
+
+    // Touch
+    canvas.addEventListener('touchstart', e => {
+      dragging = true;
+      const t = e.touches[0];
+      prev = { x: t.clientX, y: t.clientY };
+    }, { passive: true });
+    canvas.addEventListener('touchend', () => (dragging = false), { passive: true });
+    canvas.addEventListener('touchmove', e => {
+      if (!dragging) return;
+      const t = e.touches[0];
+      const dx = t.clientX - prev.x, dy = t.clientY - prev.y;
+      globe.rotation.y += dx * speed; globe.rotation.x += dy * speed;
+      clouds.rotation.y += dx * speed; clouds.rotation.x += dy * speed;
+      prev = { x: t.clientX, y: t.clientY };
+    }, { passive: true });
+
+    function animate() {
+      requestAnimationFrame(animate);
+      if (!dragging) {
+        globe.rotation.y += 0.0005;
+        clouds.rotation.y += 0.0007;
+      }
+      resize();
+      renderer.render(scene, camera);
+    }
+    animate();
+  </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Realistic 3D Globe</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: transparent;
+      display: grid;
+      place-items: center;
+    }
+    canvas { width: 100%; height: 100%; display: block; }
+  </style>
+</head>
+<body>
+  <canvas id="globeCanvas"></canvas>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    const canvas = document.getElementById('globeCanvas');
+
+    // transparent renderer
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    renderer.setClearColor(0x000000, 0);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+    camera.position.z = 2.5;
+
+    function resize() {
+      const { clientWidth: w, clientHeight: h } = canvas;
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+    }
+    window.addEventListener('resize', resize);
+
+    // Globe + clouds
+    const loader = new THREE.TextureLoader();
+
+    // Earth
+    const globeMat = new THREE.MeshStandardMaterial({
+      bumpScale: 0.07,       // a touch more relief
+      metalness: 0.08,
+      roughness: 0.85
+    });
+    const globe = new THREE.Mesh(new THREE.SphereGeometry(1, 64, 64), globeMat);
+    scene.add(globe);
+
+    // Clouds (layer 1: denser, close to surface)
+    const cloudsMat1 = new THREE.MeshStandardMaterial({
+      transparent: true,
+      opacity: 0.7,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false
+    });
+    const clouds1 = new THREE.Mesh(new THREE.SphereGeometry(1.012, 64, 64), cloudsMat1);
+    scene.add(clouds1);
+
+    // Clouds (layer 2: larger, softer halo)
+    const cloudsMat2 = new THREE.MeshStandardMaterial({
+      transparent: true,
+      opacity: 0.35,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false
+    });
+    const clouds2 = new THREE.Mesh(new THREE.SphereGeometry(1.03, 64, 64), cloudsMat2);
+    scene.add(clouds2);
+
+    // Load textures
+    loader.load(
+      'https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/earth_atmos_2048.jpg',
+      t => { globeMat.map = t; globeMat.needsUpdate = true; }
+    );
+    loader.load(
+      'https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/earth_bump_2048.jpg',
+      t => { globeMat.bumpMap = t; globeMat.needsUpdate = true; }
+    );
+    loader.load(
+      'https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/earth_clouds_1024.png',
+      t => {
+        cloudsMat1.map = t;
+        cloudsMat2.map = t;
+        cloudsMat1.needsUpdate = true;
+        cloudsMat2.needsUpdate = true;
+      }
+    );
+
+    // 🌿 Boost greenery using a tiny shader tweak
+    globeMat.onBeforeCompile = (shader) => {
+      // find the color sample of the map and nudge channels:
+      // increase green ~35%, slightly reduce blue to keep oceans in check, clip to [0..1]
+      shader.fragmentShader = shader.fragmentShader.replace(
+        '#include <map_fragment>',
+        `
+          #include <map_fragment>
+          diffuseColor.g = min(diffuseColor.g * 1.35, 1.0);
+          diffuseColor.b *= 0.95;
+        `
+      );
+    };
+
+    // Lights
+    scene.add(new THREE.AmbientLight(0x404040, 0.7));
+    const dir = new THREE.DirectionalLight(0xffffff, 2.2);
+    dir.position.set(5, 3, 5);
+    scene.add(dir);
+
+    // Drag rotate
+    let dragging = false, prev = { x: 0, y: 0 };
+    const speed = 0.005;
+    canvas.addEventListener('mousedown', e => { dragging = true; prev = { x: e.clientX, y: e.clientY }; });
+    window.addEventListener('mouseup', () => (dragging = false));
+    canvas.addEventListener('mousemove', e => {
+      if (!dragging) return;
+      const dx = e.clientX - prev.x, dy = e.clientY - prev.y;
+      globe.rotation.y += dx * speed; globe.rotation.x += dy * speed;
+      clouds1.rotation.y += dx * speed; clouds1.rotation.x += dy * speed;
+      clouds2.rotation.y += dx * speed; clouds2.rotation.x += dy * speed;
+      prev = { x: e.clientX, y: e.clientY };
+    });
+
+    // Touch
+    canvas.addEventListener('touchstart', e => {
+      dragging = true;
+      const t = e.touches[0];
+      prev = { x: t.clientX, y: t.clientY };
+    }, { passive: true });
+    canvas.addEventListener('touchend', () => (dragging = false), { passive: true });
+    canvas.addEventListener('touchmove', e => {
+      if (!dragging) return;
+      const t = e.touches[0];
+      const dx = t.clientX - prev.x, dy = t.clientY - prev.y;
+      globe.rotation.y += dx * speed; globe.rotation.x += dy * speed;
+      clouds1.rotation.y += dx * speed; clouds1.rotation.x += dy * speed;
+      clouds2.rotation.y += dx * speed; clouds2.rotation.x += dy * speed;
+      prev = { x: t.clientX, y: t.clientY };
+    }, { passive: true });
+
+    function animate() {
+      requestAnimationFrame(animate);
+      if (!dragging) {
+        globe.rotation.y += 0.0005;
+        clouds1.rotation.y += 0.0007;   // slight parallax
+        clouds2.rotation.y += 0.0009;   // outer layer moves a tad faster
+      }
+      resize();
+      renderer.render(scene, camera);
+    }
+    animate();
+  </script>
+</body>
+</html>
