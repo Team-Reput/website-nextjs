@@ -6,10 +6,11 @@ import { motion } from "framer-motion";
 export default function StoriesOfImpact() {
   const caseStudies = [
     {
-      title: "Textile Industry Case Study",
+      title: "Stitching Transparency Into Every Thread",
       description:
-        "A leading textile manufacturer leveraged RePut.ai’s platform to gain real-time visibility into their production line. By implementing predictive analytics, they reduced material wastage by 20% and improved equipment uptime. The integration helped align teams across operations and quality control, resulting in a smoother, data-driven workflow. Discover how digital transformation reshaped their manufacturing efficiency.",
-      img: "/textile.png", // Replace with your actual image
+        "B77, a rising sustainable clothing brand, set out to go beyond fashion and make accountability a core part of its identity. With growing demand for supply chain transparency, the brand wanted to provide customers with verified sustainability data for every garment. By implementing a Reput powered Digital Product Passport (DPP), B77 now traces its apparel from farm to wardrobe, ensuring authenticity, compliance, ESG KPI’s and consumer trust. This case study showcases how B77 turned sustainability into a marketing strategy providing them competitive edge.",
+      // img: "/textile.png", // Replace with your actual image
+      img: "/b77new.png", // Replace with your actual image
     },
     {
       title: "Industry Case Study",
@@ -26,7 +27,7 @@ export default function StoriesOfImpact() {
   ];
 
   return (
-    <section className="bg-white py-16 px-6 md:px-16">
+    <section className="bg-white py-16 px-6 md:px-16 ">
       {/* Heading */}
       <div className="text-center mb-10">
         <h2 className="text-black text-3xl md:text-4xl font-semibold">
@@ -34,6 +35,7 @@ export default function StoriesOfImpact() {
         </h2>
       </div>
 
+<div className="w-[80%] mx-auto flex flex-col items-center gap-8">
       {/* First Card */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -41,12 +43,12 @@ export default function StoriesOfImpact() {
         transition={{ duration: 0.5 }}
         className="grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden shadow-lg mb-8"
       >
-        <div className="bg-[#26442E] text-white p-6 flex flex-col justify-between">
+        <div className="bg-[#26442E]  text-white p-6 flex flex-col justify-between">
           <div>
-            <h3 className="text-lg md:text-xl font-semibold mb-3">
+            <h3 className="text-[28px] md:text-xl font-semibold mb-3">
               {caseStudies[0].title}
             </h3>
-            <p className="text-sm text-gray-200">{caseStudies[0].description}</p>
+            <p className="text-[18px] text-gray-200">{caseStudies[0].description}</p>
           </div>
           {/* <button className="mt-6 bg-green-500 hover:bg-green-600 text-black px-4 py-2 rounded text-sm font-medium self-start">
             View case study
@@ -62,7 +64,7 @@ export default function StoriesOfImpact() {
       </motion.div>
 
       {/* Second Row - Two Small Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid  h-[388px] grid-cols-1 md:grid-cols-2 gap-8">
         {caseStudies.slice(1).map((study, i) => (
           <motion.div
             key={i}
@@ -73,10 +75,10 @@ export default function StoriesOfImpact() {
           >
             <div className="bg-[#26442E] text-white p-6 flex flex-col justify-between">
               <div>
-                <h3 className="text-lg md:text-xl font-semibold mb-3">
+                <h3 className="text-lg text-[28px] md:text-xl font-semibold mb-3">
                   {study.title}
                 </h3>
-                <p className="text-sm text-gray-200">{study.description}</p>
+                <p className="text-sm text-[18px] text-gray-200">{study.description}</p>
               </div>
               {/* <button className="mt-4 bg-green-500 hover:bg-green-600 text-black px-4 py-2 rounded text-sm font-medium self-start bottom-4 right-1">
                 View case study
@@ -92,6 +94,8 @@ export default function StoriesOfImpact() {
           </motion.div>
         ))}
       </div>
+
+</div>
     </section>
   );
 }

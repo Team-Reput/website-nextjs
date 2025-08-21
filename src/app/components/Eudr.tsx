@@ -22,14 +22,23 @@ export default function Eudr() {
           transition={{ duration: 0.6 }}
           className="max-w-xl"
         >
-          <div className="text-3xl md:text-4xl font-semibold text-white leading-snug">
+          {/* <div className="text-3xl md:text-4xl font-semibold text-white leading-snug">
             Curious About  EUDR, <br />
              <span className="text-green-800">BRSR Core <span className="text-white">or</span> CSRD? </span> <br />
             <div className="text-sm">Check your compliance readiness in seconds.</div>
-          </div>
-          {/* <button className="mt-6 bg-green-500 hover:bg-green-600 text-black font-medium px-6 py-3 rounded flex items-center gap-2 transition">
-            Get started →
-          </button> */}
+          </div> */}
+           
+
+            <div className="text-3xl md:text-4xl font-semibold text-white leading-snug">
+  Curious About EUDR, <br />
+  <span className="shimmer-gold">BRSR Core</span> 
+  <span className="text-white"> or </span> 
+  <span className="shimmer-gold">CSRD</span> <br />
+  <div className="text-sm">Check your compliance readiness in seconds.</div>
+</div>
+
+
+
 
           <button onClick={scrollToContact} className="relative mt-6 bg-green-500 text-black font-medium px-6 py-3 rounded flex items-center gap-2 overflow-hidden transition-all duration-300 group">
             {/* <span className="relative z-10">Explore the complainer tracker →</span> */}

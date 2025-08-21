@@ -23,9 +23,9 @@ export default function Earth() {
           className="max-w-xl"
         >
           <div className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-            Design From Modern, <br />
-             <span className="text-green-800">global supply chains </span> <br />
-            <div className="text-sm">RePut power value chains  across Asia Europe, America and the  Global South.</div>
+            Design For Modern <br />
+             <span className="text-green-800 shimmer-gold">Global Supply Chains </span> <br />
+            <div className="text-sm">RePut power value chains  across Asia, Europe, USA and the western Europe.</div>
           </div>
           {/* <button className="mt-6 bg-green-500 hover:bg-green-600 text-black font-medium px-6 py-3 rounded flex items-center gap-2 transition">
             Get started →

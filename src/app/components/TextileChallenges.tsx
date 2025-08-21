@@ -17,8 +17,10 @@ export default function TextileChallenges() {
       title: "RePut Tracechain",
       highlight: "Tracechain",
       description:
-        "Gain fully supply chain visibility with blockchain-verification data. From raw material to finished product",
-      img: "/tracing.png",
+        "Gain fully supply chain visibility with blockchain- verification data. From raw material to finished product",
+      // img: "/tracing.png",
+      // img: "/tracedash.png",
+      img: "/tier123.png",
       slug: "tracechain",
     },
     {
@@ -26,7 +28,9 @@ export default function TextileChallenges() {
       highlight: "Zero Carbon",
       description:
         "Track carbon emissions across the value chain with blockchain-backed data. Empower reduction with verified insights and reporting.",
-      img: "/dashb.png",
+      // img: "/dashb.png",
+      // img: "/zerodash.png",
+      img: "/carbondash.png",
       slug: "zerocarbon",
     },
     {
@@ -41,21 +45,20 @@ export default function TextileChallenges() {
   ];
 
   return (
-    <section className="bg-white py-16 px-6 md:px-16">
+    <section className="bg-white py-16 px-6 md:px-16 w-full">
 
 
-       <div className="flex flex-col md:flex-row items-center gap-10   md:gap-32 m-20">
+       <div className="flex flex-col md:flex-row items-center gap-10    m-20">
         {/* Left Text */}
-        <div className="text-center md:text-left max-w-xl">
+        <div className="text-center md:text-left w-[930px]  text-[52x]">
           <h2 className="text-black text-3xl md:text-4xl font-semibold">
             Build For{" "}
             <span className="text-green-600 font-bold">Every Step</span> <br />
             Proven at{" "}
             <span className="text-green-600 font-bold">Every Layer</span>
           </h2>
-          <p className="text-gray-600 mt-4 text-sm md:text-base">
-            A unified traceable & sustainability platform built on blockchain and
-            powered by AI
+          <p className="text-black mt-4 text-[22px] font-bold text-sm md:text-base">
+            A unified traceable & sustainability platform built on blockchain and powered by AI
           </p>
         </div>
 
@@ -64,13 +67,13 @@ export default function TextileChallenges() {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex-shrink-0 w-full md:w-1/2 "
+          className="flex-shrink-0 w-full md:w-[40%] "
         >
           <Image
             src="/rHeader.png" // replace with your actual image
             alt="Intro Image"
-            width={140}
-            height={100}
+            width={200}
+            height={180}
             className="rounded-lg  object-cover ml-[60%]"
           />
         </motion.div>
@@ -78,7 +81,7 @@ export default function TextileChallenges() {
 
 
       {/* Features */}
-      <div className="flex flex-col gap-28 relative">
+      <div className="flex flex-col items-center justify-center gap-28 relative">
         {features.map((feature, index) => (
           <div
             key={index}
@@ -92,7 +95,7 @@ export default function TextileChallenges() {
             ></div>
 
             {/* Image */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
@@ -105,7 +108,28 @@ export default function TextileChallenges() {
                 height={300}
                 className="rounded-lg object-cover"
               />
-            </motion.div>
+            </motion.div> */}
+
+{/* Image */}
+<motion.div
+  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.5 }}
+  className="flex-shrink-0"
+>
+  <div className="transform scale-[1.23] mx-8"> {/* ✅ 23% bigger */}
+    <Image
+      src={feature.img}
+      alt={feature.title}
+      width={500}
+      height={300}
+      className="rounded-lg object-cover"
+    />
+  </div>
+</motion.div>
+
+
+
 
             {/* Text */}
             <motion.div
@@ -114,12 +138,19 @@ export default function TextileChallenges() {
               transition={{ duration: 0.5 }}
               className="max-w-md m-25"
             >
-              <h3 className=" text-black text-xl font-semibold">
+              {/* <h3 className=" text-black text-[46px]  font-semibold">
                 RePut{" "}
                 <span className="text-green-600">{feature.highlight}</span>
                 <sup>™</sup>
-              </h3>
-              <p className="text-gray-600 mt-2">{feature.description}</p>
+              </h3> */}
+
+                <h3 className="text-black text-[46px] font-semibold whitespace-nowrap">
+  RePut <span className="text-green-600">{feature.highlight}</span>
+  <sup>™</sup>
+</h3>
+
+
+              <p className="text-gray-600 mt-2 text-[20px]">{feature.description}</p>
               <button  onClick={() => router.push(`/platform/${feature.slug}`)} className="mt-4 px-5 py-2 bg-green-500 text-white text-sm font-medium rounded hover:bg-green-600 transition">
                 Explore More
               </button>

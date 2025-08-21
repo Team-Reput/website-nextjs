@@ -92,19 +92,24 @@ const benefits = [
   {
     title: "Make decisions based on data:",
     description:
-      "Data collection not only enables you to comply with the regulation, but also gives valuable business insights.",
+      "Data collection not only enables you to comply with the regulation, but also gives valuable business insights",
   },
   {
     title: "Enable circular systems:",
     description:
-      "Capture data from every stage of a textile’s life cycle and implement better principles for reuse and recycling.",
+      "Capture data from every stage of a Product life cycle and implement better principles for reuse and recycling.",
   },
+
   {
     title: "Ensure consumers trust:",
     description:
       "Consumers are seeking sustainable products, and by delivering them you future-proof your products.",
   },
 ];
+
+
+
+
 
 export default function BenefitsSection() {
 
@@ -114,10 +119,10 @@ export default function BenefitsSection() {
     <section className="w-full py-16 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl font-bold mb-2 text-black">
+        <h2 className="text-[48px] font-bold mb-2 text-black">
           Benefits of <br /> the Digital Passport
         </h2>
-        <p className="text-gray-600 mb-12">
+        <p className="text-gray-600 text-[18px] mb-12">
           Beyond complying with the new regulation, with the Textile Passport you can also:
         </p>
 
@@ -129,18 +134,18 @@ export default function BenefitsSection() {
               className="relative bg-green-900 text-white p-6  shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_20px_#00ff9d]"
             >
               {/* White Diagonal Corner */}
-              <div className="absolute top-0 right-0 w-20 h-20 bg-white clip-corner">
+              <div className="absolute top-0 right-0 w-20 h-20 scale-[1.23] bg-white clip-corner">
                 <Image
                   src="/badge.png" // replace with your icon
                   alt="Icon"
                   width={28}
                   height={28}
-                  className="absolute top-3 right-3"
+                  className="absolute top-3 right-3 "
                 />
               </div>
 
-              <h3 className="font-bold mb-2">{item.title}</h3>
-              <p className="text-gray-200">{item.description}</p>
+              <h3 className="font-bold mb-2 text-[22px]">{item.title}</h3>
+              <p className="text-gray-200 text-[18px]">{item.description}</p>
             </div>
           ))}
         </div>

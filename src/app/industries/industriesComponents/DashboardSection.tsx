@@ -5,7 +5,7 @@ export default function DashboardSection() {
           const { scrollToContact } = useContact();
   
   return (
-    <section className="w-full bg-white ">
+    <section className="w-full bg-green-50 ">
       <div className="grid grid-cols-1 md:grid-cols-2 items-center">
         
         {/* Left Side - Mockup with background */}
@@ -43,10 +43,10 @@ export default function DashboardSection() {
 
         {/* Right Side - Text */}
         <div className="bg-green-50 p-8 md:p-12 flex flex-col justify-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
+          <h2 className="text-3xl md:text-[48px] font-bold mb-4 text-black">
             DPP & Carbon<br/> Dashboard with RePut.ai
           </h2> 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-gray-700 text-[18px] mb-6 leading-relaxed">
             To bring textile products to market in the EU and other regulated regions, brands must build a{" "}
             <span className="font-semibold">transparent, compliant, and sustainable supply chain</span> with all
             essential product and emissions data in one place. RePut.ai’s{" "}

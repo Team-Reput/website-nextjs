@@ -65,12 +65,12 @@ export default function SustainabilitySection() {
             <p className="  text-sm font-medium text-[#29442C]">{card.category}</p>
 
             {/* Title */}
-            <h3 className="text-xl font-bold text-[#29442C] mt-1">
+            <h3 className="text-xl font-bold text-[20px] text-[#29442C] mt-1">
               {card.title}
             </h3>
 
             {/* Description */}
-            <p className="text-[#29442C] mt-2 text-sm">{card.description}</p>
+            <p className="text-[#29442C] text-[16px] mt-2 text-sm">{card.description}</p>
 
             {/* Logos */}
             <div className="flex flex-wrap gap-20 mt-6 ml-20">

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function AnimatedOctagon() {
   // List of images to rotate in center
-  const images = ["/s1.png", "/s22.png", "/s3.png", "/s5.png"];
+  const images = ["/detect.png","/s1.png", "/s22.png", "/s3.png", "/s5.png"]
 
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -117,7 +117,7 @@ export default function AnimatedOctagon() {
 
         {/* Central content - static octagonal frame */}
         <div
-          className="absolute inset-32 overflow-hidden shadow-2xl border-4 border-transparent"
+          className="absolute inset-32 overflow-hidden shadow-2xl border-4 border-transparent "
           style={{
             clipPath:
               "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",

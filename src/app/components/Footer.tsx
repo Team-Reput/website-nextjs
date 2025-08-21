@@ -291,9 +291,9 @@ export default function Footer() {
             <h3 className="mb-4 font-semibold">Features</h3>
             <ul className="space-y-2 text-sm">
               <li>Supply chain mapping</li>
-              <li>Transaction traceability</li>
-              <li>Supplier watchlist monitoring</li>
-              <li>Supplier engagement</li>
+              <li>Nth Tier Tracebility</li>
+              <li>Magic Scan</li>
+              <li>Bulk Upload</li>
               <li>ERP Integration</li>
             </ul>
           </div>
@@ -317,6 +317,15 @@ export default function Footer() {
                   <li>SEBI Business Responsibility and Sustainability Report (BRSR)</li>
                 </ul>
               </li>
+
+            </ul>
+          </div>
+
+          <div>
+            <ul className="space-y-2 text-sm">
+              <li className="text-[#0F2B14]">.</li>
+              <li className="text-[#0F2B14]">.</li>
+              <li className="text-[#0F2B14]">.</li>
               <li>
                 Europe
                 <ul className="ml-4 list-disc">
@@ -328,17 +337,17 @@ export default function Footer() {
           </div>
 
           {/* Resources */}
-          <div className="ml-25">
+          {/* <div className="ml-25">
             <hr className="border-gray-600 my-6" />
             <h3 className="mb-4 font-semibold">Resources</h3>
             <ul className="space-y-2 text-sm">
               <li>Blog</li>
               <li>Customer Stories</li>
-              {/* <li>Webinar / Videos / Podcasts</li> */}
-              {/* <li>Ebooks</li> */}
-              {/* <li>Events</li> */}
+              <li>Webinar / Videos / Podcasts</li>
+              <li>Ebooks</li>
+              <li>Events</li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
 
@@ -358,11 +367,11 @@ export default function Footer() {
 
             <h3 className="mb-4 font-semibold">Technologies</h3>
             <ul className="space-y-2 text-sm">
-              <li>Mock Detention</li>
-              <li>Upstream Quality Assurance</li>
-              <li>N-Tire Risk Mapping</li>
-              <li>Supplier Due Diligence</li>
-              <li>Corporate Responsibility</li>
+              <li>Anomly  Detection</li>
+              <li>Compliance Assurance</li>
+              <li>Risk Mapping</li>
+              <li>AI Based Insides</li>
+              <li>Prescriptive Analysis</li>
               <li>Supply Chain Resilience</li>
             </ul>
           </div>

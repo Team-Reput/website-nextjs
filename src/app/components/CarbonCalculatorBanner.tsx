@@ -22,7 +22,7 @@ export default function CarbonCalculatorBanner() {
           <h2 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
             Get a quick and easy <br />
             calculation of your company’s <br />
-            carbon footprint
+            <div className="shimmer-gold">Carbon Footprint</div>
           </h2>
  
 

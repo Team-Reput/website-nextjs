@@ -71,10 +71,10 @@ export default function TextileScreen() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          <h1 className="text-[56px] md:text-6xl font-bold mb-4">
             RePut.ai For <span className="text-white">Textile Products</span>
           </h1>
-          <p className="mb-6 text-lg text-gray-200">
+          <p className="mb-6 text-[22px] w-[607px] text-gray-200">
             Empower your textile business with end-to-end product traceability
             and sustainability reporting.
           </p>

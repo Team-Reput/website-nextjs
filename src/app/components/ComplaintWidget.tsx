@@ -19,10 +19,11 @@ export default function ComplaintWidget() {
           transform: "scale(0.94)",
         }}
       />
-      <div className="absolute w-1/3 h-1/3 z-20"
-        style={{ bottom: "-20%", right: "-20%" }}>
+      <div className="absolute w-2/3 h-2/3 z-20"
+        style={{ bottom: "-55%", right: "-20%" }}>
       <Image
-        src="/EPRhome.png"        // put this file in /public
+        // src="/EPRhome.png"        // put this file in /public
+        src="/er2.png"        // put this file in /public
         alt="Forest ring"
         fill
         priority

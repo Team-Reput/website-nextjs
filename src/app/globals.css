@@ -37,3 +37,90 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Medium.woff2') format('woff2');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+
+.shimmer-gold {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  background: linear-gradient(
+    90deg,
+    #b8860b 0%,   /* dark gold */
+    #ffd700 25%,  /* gold */
+    #fff8dc 50%,  /* light ivory */
+    #ffd700 75%,  /* gold */
+    #b8860b 100%  /* dark gold */
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: royalShimmer 4s linear infinite;
+}
+
+@keyframes royalShimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+
+
+/* 👑 Royal Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;               /* little thicker, feels premium */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;        /* light grey background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b5b5b5;        /* soft grey handle */
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;  /* adds spacing effect */
+  transition: all 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8c8c8c;        /* darker on hover */
+}
+
+/* Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #b5b5b5 #f1f1f1;
+}
+
+/* Smooth scrolling everywhere */
+html {
+  scroll-behavior: smooth;
+}

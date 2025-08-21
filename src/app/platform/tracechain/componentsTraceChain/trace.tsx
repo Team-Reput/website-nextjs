@@ -59,13 +59,13 @@ export default function Trace() {
       {/* First Section */}
       <section className="h-screen relative overflow-hidden bg-gray-100">
         <div className="absolute top-[20%] left-1/2 -translate-x-1/2 text-center text-2xl">
-          <div className="flex items-center justify-center ml-18 mb-5 bg-white rounded-[25px] px-2 py-1 w-70   outline-2 outline-gray-200">
-            <Image src="/rocket-icon.png" alt="Rocket Icon" width={20} height={20} />
+          <div className="flex items-center justify-center ml-33 mb-5 bg-white rounded-[25px] px-2 py-1 w-70   outline-2 outline-gray-200">
+            {/* <Image src="/rocket-icon.png" alt="Rocket Icon" width={20} height={20} /> */}
             <p className="ml-2 text-black text-lg">AI Powered Technology</p>
           </div>
-          <h1 className="text-[56px] mb-4 text-[#29442C]">TraceChain</h1>
-          <p className="text-lg mb-4 text-[#071030]">Trace Every Tier, Every Time</p>
-          <span className="block w-[30em] text-sm mb-5 text-[#071030]">
+          <h1 className=" mb-4 text-[#29442C] text-[56px] font-semibold">TraceChain</h1>
+          <p className="text-lg mb-4 text-[#071030] text-[18px] font-bold">Trace Every Tier, Every Time</p>
+          <span className="block w-[34em] text-[16px] mb-5 text-[#071030]  ">
             Build a digital twin of your supply chain for full, real-time visibility and end-to-end traceability.
           </span>
           <button onClick={scrollToContact}  className="px-5 py-2 text-white bg-[#29442C] rounded hover:bg-[#29442cd5] transition">
@@ -94,16 +94,26 @@ export default function Trace() {
       {/* Fourth Section */}
       <section className="h-screen flex justify-center items-center bg-gray-50">
         <div className="relative left-1/4 -translate-x-1/2 text-2xl text-[#29442C]">
-          <h1 className="text-sm mb-4 text-[#29442C] rounded-[40px] w-[100px] px-2  outline-1 outline-[#29442C]">
+          <h1 className="text-[16px] mb-4 text-[#29442C] rounded-[40px] w-[100px] px-2  outline-1 outline-[#29442C]">
             TraceChain
           </h1>
-          <h5 className="mb-4">Trace Every Tier, Every Time</h5>
-          <p className="text-base w-[34em] mb-4">
-            Build a complete digital twin of your supply chain — from raw materials to the nᵗʰ tier...
+          <h5 className="mb-4 text-[24px]">Trace Every Tier, Every Time</h5>
+          {/* <p className="text-base w-[34em] mb-4 text-[16px]">
+             Build a complete digital twin of your supply chain — from raw materials to the nᵗʰ tier. Our platform gives you full visibility into every supplier, enabling you to track production in real time, assess performance, and manage resource allocation with precision. Detect issues early, make informed decisions faster, and strengthen supply chain resilience through transparent, end-to-end traceability.
+          </p> */}
+          <p className="text-base w-[34em] mb-4 text-[16px]">
+            Trace Every Tier, Every Time
+Build a complete digital twin of your supply chain — from raw materials to the nᵗʰ tier. Our platform gives you full visibility into every supplier, enabling you to track production in real time, assess performance, and manage resource allocation with precision. Detect issues early, make informed decisions faster, and strengthen supply chain resilience through transparent, end-to-end traceability.
+Why TraceChain?
+Consumer Trust & Transparency – Strengthen brand reputation by proving product authenticity and offering full traceability from source to shelf.
+AI-Driven Intelligence – Predict disruptions before they occur and gain proactive insights into supply chain risks.
+Sustainability & Compliance – Track ESG metrics across suppliers and ensure alignment with global reporting standards.
+Cost & Risk Optimization – Reduce inefficiencies, manage risks, and improve supplier performance with data-backed decisions.
+Seamless Integration – Connect effortlessly with ERP and procurement systems, creating a scalable, future-ready supply chain.
           </p>
         </div>
         <div className="flex justify-center items-center w-full h-full">
-          <Image src="/section-4.png" alt="TraceChain" width={800} height={600} className="w-[69%] h-[65%] object-contain transition-all duration-1000 ease-out" />
+          <Image src="/section-4.png" alt="TraceChain" width={1000} height={800} className="w-[75%] h-[75%] object-cover transition-all duration-1000 ease-out" />
         </div>
       </section>
 
@@ -111,7 +121,7 @@ export default function Trace() {
       <section className="text-center py-12 bg-gradient-to-b from-[#29442C] to-white">
         <div className="flex justify-between items-center mb-8 text-white px-5">
           <div className="flex items-center bg-white rounded-[25px] p-1 pr-2">
-            <Image src="/rocket-icon.png" alt="Rocket Icon" width={20} height={20} />
+            {/* <Image src="/rocket-icon.png" alt="Rocket Icon" width={20} height={20} /> */}
             <p className="ml-2 text-black text-lg">RePut.ai</p>
           </div>
           <h2 className="text-4xl ml-2 font-bold">Our Platform</h2>
@@ -151,6 +161,25 @@ export default function Trace() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

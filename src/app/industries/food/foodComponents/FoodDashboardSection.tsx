@@ -6,7 +6,7 @@ export default function FoodDashboardSection() {
         const { scrollToContact } = useContact();
   
   return (
-    <section className="w-full bg-white ">
+    <section className="w-full bg-green-50 ">
       <div className="grid grid-cols-1 md:grid-cols-2 items-center">
         
         {/* Left Side - Mockup with background */}
@@ -44,10 +44,10 @@ export default function FoodDashboardSection() {
 
         {/* Right Side - Text */}
         <div className="bg-green-50 p-8 md:p-12 flex flex-col justify-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
+          <h2 className="text-[38px] md:text-4xl font-bold mb-4 text-black">
             DPP & Compliance<br/> management with Reput.ai
           </h2>
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-gray-700 text-[18px] mb-6 leading-relaxed">
             To bring textile products to market in the EU and other regulated regions, brands must build a transparent, compliant, and sustainable supply chain with all essential product and emissions data in one place.RePut.ai’s Digital Product Passport and Carbon Dashboard work together to collect, verify, and share data across the supply chain—including material composition, GHG emissions, recycled content, and ESG metrics—ensuring that every supplier meets regulatory and certification requirements.
           </p>
           <button onClick={scrollToContact} className="bg-[#07130C] text-white px-6 py-3 rounded-md font-medium hover:bg-green-600 transition flex items-center gap-2 w-fit">

@@ -29,32 +29,32 @@ export default function SimpleBanner() {
 
       {/* Text Content */}
       <div className="absolute inset-0 flex items-center  mb-10 max-w-7xl mx-auto px-4 py-12">
-        <div className="text-left text-white p-8 max-w-lg">
+        <div className="text-left  text-white p-8 ">
           <motion.h2
-            className="text-3xl font-bold rounded-3xl"
+            className="text-3xl text-[34px] font-bold rounded-3xl text-[#6EED88]"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Ready to <span className="text-green-500">Transform</span>
+            Ready to <span className="text-[#6EED88]">Redefine</span>
           </motion.h2>
 
           <motion.h3
-            className="text-2xl font-semibold mt-2 "
+            className="text-2xl text-[34px] font-semibold mt-2 shimmer-gold"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
           >
-            Your Supply Chain?
+            Supply Chain Transparency?
           </motion.h3>
 
           <motion.p
-            className="text-gray-300 mt-4"
+            className="text-gray-300 mt-4 text-[18px]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            Let s move from assumptions to action with our cutting-edge transparency tools.
+            Let s move from assumptions to action
           </motion.p>
 
           <motion.button

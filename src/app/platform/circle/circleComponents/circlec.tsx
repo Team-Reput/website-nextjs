@@ -59,13 +59,13 @@ export default function Circlrc() {
       {/* First Section */}
       <section className="h-screen relative overflow-hidden bg-gray-100">
         <div className="absolute top-[20%] left-1/2 -translate-x-1/2 text-center text-2xl">
-          <div className="flex items-center justify-center ml-18 mb-5 bg-white rounded-[25px] px-2 py-1 w-70   outline-2 outline-gray-200">
-            <Image src="/rocket-icon.png" alt="Rocket Icon" width={20} height={20} />
+          <div className="flex items-center justify-center ml-35 mb-5 bg-white rounded-[25px] px-2 py-1 w-70   outline-2 outline-gray-200">
+            {/* <Image src="/rocket-icon.png" alt="Rocket Icon" width={20} height={20} /> */}
             <p className="ml-4 text-black text-lg">AI Powered Technology</p>
           </div>
-          <h1 className="text-[56px] mb-4 text-[#29442C] font-bold">RePut Circle</h1>
-          <p className="text-lg mb-4 text-[#071030] font-bold">Closing the Loop. Powering the Circular Economy.</p>
-          <span className="block w-[30em] text-sm mb-5 text-[#071030]">
+          <h1 className="text-[56px] mb-4 text-[#29442C] font-semibold">RePut Circle</h1>
+          <p className="text-lg mb-4 text-[#071030] text-[18px] font-bold">Closing the Loop. Powering the Circular Economy.</p>
+          <span className="block w-[35em] text-[16px] mb-5 text-[#071030]">
 By connecting waste with verified reintegration partners, we make circularity a practical, profitable extension of supply chain traceability — not a separate initiative.
           </span>
           <button onClick={scrollToContact}  className="px-5 py-2 text-white bg-[#29442C] rounded hover:bg-[#29442cd5] transition">
@@ -92,42 +92,28 @@ By connecting waste with verified reintegration partners, we make circularity a 
         </animated.div>
       </section>
 
-      {/* Fourth Section */}
-      {/* <section className="h-screen flex justify-center items-center bg-gray-50">
-        <div className="relative left-1/4 -translate-x-1/2 text-2xl text-[#29442C]">
-          <h1 className="text-sm mb-4 text-[#29442C] rounded-[40px] w-[100px] px-2   outline-1 outline-[#29442C]">
-            TraceChain
-          </h1>
-          <h5 className="mb-4">Trace Every Tier, Every Time</h5>
-          <p className="text-base w-[34em] mb-4">
-            Build a complete digital twin of your supply chain — from raw materials to the nᵗʰ tier...
-          </p>
-        </div>
-        <div className="flex justify-center items-center w-full h-full">
-          <Image src="/section-4.png" alt="TraceChain" width={800} height={600} className="w-[69%] h-[65%] object-contain transition-all duration-1000 ease-out" />
-        </div>
-      </section> */}
+ 
 
          <div className="min-h-screen bg-white flex">
             {/* Left Content */}
             <div className="w-1/2 flex flex-col justify-center px-12 space-y-8">
               <div className="flex items-center space-x-2 ">
-                <span className="text-xl">🚀</span>
-                <span className="font-semibold text-[#29442C]">ZERO Carbon</span>
+                {/* <span className="text-xl">🚀</span> */}
+                <span className="mb-4 text-[#29442C] rounded-[40px] w-[120px] px-2  outline-1 outline-[#29442C] text-[16px]">Reput Circle</span>
               </div>
       
               <div className="space-y-6">
                 <div className="flex space-x-4">
                   {/* <Image src="/ai-driven.png" alt="AI" width={40} height={40} /> */}
                   <div>
-                    <h3 className="font-bold text-lg text-[#29442C]">RePut Circle provides an edge with:</h3>
-                    <p className="text-gray-600 text-sm">
+                    <h3 className="font-bold text-lg text-[#29442C] text-[24px]">RePut Circle provides an edge with:</h3>
+                    <p className="text-gray-600 text-[16px]">
                       AI-based matching of dead stock to verified recyclers
                     </p>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-600  text-[16px]">
                       Cost–benefit insights to support circular business decisions
                     </p>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-600  text-[16px]">
                       Integrated traceability for material reintegration with our partner processors
                     </p>
                   </div>
@@ -137,11 +123,27 @@ By connecting waste with verified reintegration partners, we make circularity a 
                 <div className="flex space-x-4">
                   {/* <Image src="/data-icon.png" alt="Data" width={40} height={40} /> */}
                   <div>
-                    <h3 className="font-bold text-lg text-[#29442C]">Challenges in Building a Circular Supply Chain:</h3>
+                    <h3 className="font-bold text-lg text-[#29442C]  text-[24px]">Challenges in Building a Circular Supply Chain:</h3>
                     <ul>
-                      <li className="text-gray-600 text-sm">Pre-consumer waste left untracked and unmanaged</li>
-                      <li className="text-gray-600 text-sm">Limited visibility on reintegration opportunities</li>
-                      <li className="text-gray-600 text-sm">Difficulty validating circular claims for compliance</li>
+                      <li className="text-gray-600  text-[16px]">Untracked Pre-Consumer Waste – Large volumes remain unmanaged, leading to lost value.</li>
+                      <li className="text-gray-600  text-[16px]">Limited Reintegration Visibility – Businesses struggle to identify and access reintegration opportunities.</li>
+                      <li className="text-gray-600  text-[16px]">Compliance Barriers – Difficulty in validating and certifying circularity claims for regulatory reporting.</li>
+                    </ul>
+                    {/* <p className="text-gray-600 text-sm">
+                      RePut uniquely reduces ESG data collection time, freeing up
+                      resources for action.
+                    </p> */}
+                  </div>
+                </div>
+
+                <div className="flex space-x-4">
+                  <div>
+                    <h3 className="font-bold text-lg text-[#29442C]  text-[24px]">RePut Circle provides an edge with:</h3>
+                    <ul>
+                      <li className="text-gray-600  text-[16px]">AI-Powered Matching – Connects dead stock seamlessly to verified recyclers for maximum material recovery.</li>
+                      <li className="text-gray-600  text-[16px]">Smart Cost–Benefit Insights – Provides financial and environmental impact analysis to guide better circular business decisions.</li>
+                      <li className="text-gray-600  text-[16px]">End-to-End Traceability – Ensures materials are reintegrated transparently through trusted partner processors.</li>
+                      <li className="text-gray-600  text-[16px]">Scalable Circular Solutions – Supports businesses of all sizes in building measurable and compliant circular practices.</li>
                     </ul>
                     {/* <p className="text-gray-600 text-sm">
                       RePut uniquely reduces ESG data collection time, freeing up
@@ -201,7 +203,7 @@ By connecting waste with verified reintegration partners, we make circularity a 
       <section className="text-center py-12 bg-gradient-to-b from-[#29442C] to-white">
         <div className="flex justify-between items-center mb-8 text-white px-5">
           <div className="flex items-center bg-white rounded-[25px] p-1 pr-2">
-            <Image src="/rocket-icon.png" alt="Rocket Icon" width={20} height={20} />
+            {/* <Image src="/rocket-icon.png" alt="Rocket Icon" width={20} height={20} /> */}
             <p className="ml-2 text-black text-lg">RePut.ai</p>
           </div>
           <h2 className="text-4xl ml-2 font-bold">Our Platform</h2>

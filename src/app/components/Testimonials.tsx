@@ -49,8 +49,8 @@ const testimonials: Testimonial[] = [
 export default function Testimonials(){
 return (
     <div className="w-full bg-white">
-      <h3 className="text-center text-green-700 font-medium">Testimonials</h3>
-      <h2 className="text-center text-2xl md:text-3xl font-bold text-gray-800 mb-8">
+      <h3 className="text-center text-green-700 text-[24px] text-bold font-medium">Testimonials</h3>
+      <h2 className="text-center text-[32px] text-2xl md:text-3xl font-bold text-gray-800 mb-8">
         Appreciated by brands world wide
       </h2>
 
@@ -79,7 +79,7 @@ return (
 
               {/* Right Text */}
               <div className="flex-1 text-center md:text-left">
-                <p className="text-gray-700 mb-4">{t.text}</p>
+                <p className="text-gray-700 mb-4 text-[16px]">{t.text}</p>
                 <p className="font-bold text-gray-900">{t.name}</p>
                 <p className="text-sm text-gray-600">{t.company}</p>
               </div>

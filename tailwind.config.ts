@@ -33,6 +33,9 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 20s linear infinite', // needed for your class
       },
+      fontFamily: {
+      gilroy: ['Gilroy', 'sans-serif'],
+    },
     },
   },
   plugins: [],

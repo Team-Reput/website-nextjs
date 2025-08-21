@@ -1,6 +1,3 @@
-
-
-
 "use client";
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { ReactTyped } from "react-typed";
@@ -8,9 +5,8 @@ import Typed from "typed.js";
 import { AnimatePresence, motion } from "framer-motion";
 import { useContact } from "../components/ContactContext";
 
-
-import AnimatedOctagon from "./AnimatedOctagon"; // <-- updated to fill parent
-import Globe3D from "./Globe3D";                 // <-- updated to fill parent
+import AnimatedOctagon from "./AnimatedOctagon";  
+import Globe3D from "./Globe3D";                 
 import ComplaintWidget from "./ComplaintWidget";
 
 type Visual = "octagon" | "globe" | "compliance";
@@ -19,11 +15,10 @@ export default function HeroSection() {
   const backgroundImage = "/homeBack.png";
   const { scrollToContact } = useContact();
 
-
   const leftContents = [
     {
       heading: "Your Only Source Of Truth For",
-      typedWords: ["Transparent", "compliance", "Circular"],
+      typedWords: ["Transparent", "compliance", "Circular", "Sustainability"], // ✅ added Sustainability
       subHeading: "Supply Chains",
       description:
         "Build For global brands. Trusted across industries RePut connected data. supplier data. supplier and regulations into one realtime verifiable platform",
@@ -46,6 +41,7 @@ export default function HeroSection() {
   const wordToVisual = (word: string): Visual => {
     const w = word.toLowerCase();
     if (w === "circular") return "globe";
+    if (w === "sustainability") return "globe"; // ✅ map Sustainability to Globe3D
     if (w === "compliance") return "compliance";
     return "octagon";
   };
@@ -64,8 +60,6 @@ export default function HeroSection() {
     exit: { opacity: 0, scale: 0.98, y: -6, transition: { duration: 0.25 } },
   };
 
- 
-
   return (
     <section
       className="relative w-full min-h-[90vh] flex items-center justify-center px-[60px] py-[40px]"
@@ -77,8 +71,8 @@ export default function HeroSection() {
     >
       <div className="grid grid-cols-1 md:grid-cols-2 items-center max-w-[1280px] w-full">
         {/* LEFT CONTENT */}
-        <div className="space-y-[16px]">
-          <h1 className="text-[36px] leading-[44px] font-bold tracking-tight text-black">
+        <div className="space-y-[16px] ">
+          <h1 className="text-[42px] leading-[60px] tracking-wide  font-bold text-black">
             {content.heading.split(" ").map((word, i) => (
               <span key={i} className={word === "Only" ? "text-green-500" : ""}>
                 {word}{" "}
@@ -86,25 +80,21 @@ export default function HeroSection() {
             ))}
             <br />
             <span className="bg-[#6FFFA9] px-[8px] py-[2px] rounded shadow-md inline-block align-middle">
-              <ReactTyped
-                typedRef={(instance) => {
-                  typedInstance.current = instance ?? null;
-                }}
-                strings={content.typedWords}
-                typeSpeed={80}
-                backSpeed={36}
-                // backDelay={8000} // ⏸ pause 3s after each word completes
-                backDelay={12000} // ⏸ pause 3s after each word completes
-                // backDelay={1200000} // ⏸ pause 3s after each word completes
-                smartBackspace
-                loop
-                // showCursor
-                // cursorChar="|"
-                showCursor={false}
-                // onStringTyped={handleStringTyped}
-                preStringTyped={handleStringTyped}
-                 
-              />
+              <div className="first-letter:uppercase">
+                <ReactTyped
+                  typedRef={(instance) => {
+                    typedInstance.current = instance ?? null;
+                  }}
+                  strings={content.typedWords}
+                  typeSpeed={80}
+                  backSpeed={36}
+                  backDelay={5000}
+                  smartBackspace
+                  loop
+                  showCursor={false}
+                  preStringTyped={handleStringTyped}
+                />
+              </div>
             </span>{" "}
             <span className="text-black">{content.subHeading}</span>
           </h1>
@@ -113,14 +103,16 @@ export default function HeroSection() {
             {content.description}
           </p>
 
-          <button  onClick={scrollToContact}  className="bg-[#6FFFA9] hover:bg-[#5de997] transition text-black px-[20px] py-[10px] rounded shadow-md font-semibold flex items-center gap-2 w-fit">
+          <button
+            onClick={scrollToContact}
+            className="bg-[#6FFFA9] hover:bg-[#5de997] transition text-black px-[20px] py-[10px] rounded shadow-md font-semibold flex items-center gap-2 w-fit"
+          >
             See RePut in action →
           </button>
         </div>
 
-        {/* RIGHT VISUAL — fixed frame, visuals fill it */}
-        <div className="relative flex justify-center mt-10 md:mt-0">
-          {/* The frame keeps layout constant so bg doesn't jump */}
+        {/* RIGHT VISUAL */}
+        <div className="relative flex justify-center mt-10 md:mt-0 mb-20">
           <div className="relative aspect-square w-[320px] md:w-[420px] lg:w-[520px]">
             <AnimatePresence mode="wait">
               {visual === "globe" ? (
@@ -132,19 +124,18 @@ export default function HeroSection() {
                   animate="animate"
                   exit="exit"
                 >
-                  <ComplaintWidget />
+                  <Globe3D /> {/* ✅ Globe3D for both Circular & Sustainability */}
                 </motion.div>
               ) : visual === "compliance" ? (
                 <motion.div
-                key="compliance"
-                className="absolute inset-0"
+                  key="compliance"
+                  className="absolute inset-0"
                   variants={fadeVariants}
                   initial="initial"
                   animate="animate"
                   exit="exit"
                 >
-                  {/* Swap to your actual compliance component when ready */}
-                  <Globe3D />
+                  <ComplaintWidget />
                 </motion.div>
               ) : (
                 <motion.div
@@ -165,6 +156,180 @@ export default function HeroSection() {
     </section>
   );
 }
+
+
+
+
+
+
+// "use client";
+// import React, { useState, useEffect, useCallback, useRef } from "react";
+// import { ReactTyped } from "react-typed";
+// import Typed from "typed.js";
+// import { AnimatePresence, motion } from "framer-motion";
+// import { useContact } from "../components/ContactContext";
+
+
+// import AnimatedOctagon from "./AnimatedOctagon";  
+// import Globe3D from "./Globe3D";                 
+// import ComplaintWidget from "./ComplaintWidget";
+
+// type Visual = "octagon" | "globe" | "compliance";
+
+// export default function HeroSection() {
+//   const backgroundImage = "/homeBack.png";
+//   const { scrollToContact } = useContact();
+
+
+//   const leftContents = [
+//     {
+//       heading: "Your Only Source Of Truth For",
+//       typedWords: ["Transparent", "compliance", "Circular"],
+//       subHeading: "Supply Chains",
+//       description:
+//         "Build For global brands. Trusted across industries RePut connected data. supplier data. supplier and regulations into one realtime verifiable platform",
+//     },
+//   ];
+
+//   const [currentContent, setCurrentContent] = useState(0);
+//   const [visual, setVisual] = useState<Visual>("octagon");
+//   const typedInstance = useRef<Typed | null>(null);
+
+//   useEffect(() => {
+//     const contentInterval = setInterval(() => {
+//       setCurrentContent((prev) => (prev + 1) % leftContents.length);
+//     }, 6000);
+//     return () => clearInterval(contentInterval);
+//   }, [leftContents.length]);
+
+//   const content = leftContents[currentContent];
+
+//   const wordToVisual = (word: string): Visual => {
+//     const w = word.toLowerCase();
+//     if (w === "circular") return "globe";
+//     if (w === "compliance") return "compliance";
+//     return "octagon";
+//   };
+
+//   const handleStringTyped = useCallback(
+//     (index: number) => {
+//       const word = content.typedWords[index] ?? "";
+//       setVisual(wordToVisual(word));
+//     },
+//     [content.typedWords]
+//   );
+
+//   const fadeVariants = {
+//     initial: { opacity: 0, scale: 0.96, y: 8 },
+//     animate: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.35 } },
+//     exit: { opacity: 0, scale: 0.98, y: -6, transition: { duration: 0.25 } },
+//   };
+
+ 
+
+//   return (
+//     <section
+//       className="relative w-full min-h-[90vh] flex items-center justify-center px-[60px] py-[40px]"
+//       style={{
+//         backgroundImage: `url(${backgroundImage})`,
+//         backgroundSize: "cover",
+//         backgroundPosition: "center",
+//       }}
+//     >
+//       <div className="grid grid-cols-1 md:grid-cols-2 items-center max-w-[1280px] w-full">
+//         {/* LEFT CONTENT */}
+//         <div className="space-y-[16px] ">
+//           <h1 className="text-[42px] leading-[60px] tracking-wide  font-bold text-black">
+//             {content.heading.split(" ").map((word, i) => (
+//               <span key={i} className={word === "Only" ? "text-green-500" : ""}>
+//                 {word}{" "}
+//               </span>
+//             ))}
+//             <br />
+//             <span className="bg-[#6FFFA9] px-[8px] py-[2px] rounded shadow-md inline-block align-middle">
+
+
+// <div className="first-letter:uppercase">
+//   <ReactTyped
+//     typedRef={(instance) => {
+//       typedInstance.current = instance ?? null;
+//     }}
+//     strings={content.typedWords}
+//     typeSpeed={80}
+//     backSpeed={36}
+//     backDelay={5000}
+//     smartBackspace
+//     loop
+//     showCursor={false}
+//     preStringTyped={handleStringTyped}
+//   />
+// </div>
+
+
+
+
+//             </span>{" "}
+//             <span className="text-black">{content.subHeading}</span>
+//           </h1>
+
+//           <p className="text-[16px] leading-[24px] text-[#3F3F40] max-w-[520px] font-bold">
+//             {content.description}
+//           </p>
+
+//           <button  onClick={scrollToContact}  className="bg-[#6FFFA9] hover:bg-[#5de997] transition text-black px-[20px] py-[10px] rounded shadow-md font-semibold flex items-center gap-2 w-fit">
+//             See RePut in action →
+//           </button>
+//         </div>
+
+
+
+//         {/* RIGHT VISUAL — fixed frame, visuals fill it */}
+//         <div className="relative flex justify-center mt-10 md:mt-0 mb-20">
+//           {/* The frame keeps layout constant so bg doesn't jump */}
+//           <div className="relative aspect-square w-[320px] md:w-[420px] lg:w-[520px]">
+//             <AnimatePresence mode="wait">
+//               {visual === "globe" ? (
+//                 <motion.div
+//                   key="globe"
+//                   className="absolute inset-0"
+//                   variants={fadeVariants}
+//                   initial="initial"
+//                   animate="animate"
+//                   exit="exit"
+//                 >
+//                   <ComplaintWidget />
+//                 </motion.div>
+//               ) : visual === "compliance" ? (
+//                 <motion.div
+//                 key="compliance"
+//                 className="absolute inset-0"
+//                   variants={fadeVariants}
+//                   initial="initial"
+//                   animate="animate"
+//                   exit="exit"
+//                 >
+//                   {/* Swap to your actual compliance component when ready */}
+//                   <Globe3D />
+//                 </motion.div>
+//               ) : (
+//                 <motion.div
+//                   key="octagon"
+//                   className="absolute inset-0"
+//                   variants={fadeVariants}
+//                   initial="initial"
+//                   animate="animate"
+//                   exit="exit"
+//                 >
+//                   <AnimatedOctagon />
+//                 </motion.div>
+//               )}
+//             </AnimatePresence>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
 
 

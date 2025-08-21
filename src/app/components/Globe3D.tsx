@@ -127,7 +127,8 @@ export default function Globe3D() {
         style={{ bottom: "-15%", left: "-20%" }}
       >
         <Image
-          src="/cbam2.png"
+          // src="/cbam2.png"
+          src="/cbamnew2.png"
           alt="cbam2"
           fill
           priority
