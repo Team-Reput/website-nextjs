@@ -21,7 +21,7 @@ export default function HeroSection() {
       typedWords: ["Transparent", "compliance", "Circular", "Sustainability"], // ✅ added Sustainability
       subHeading: "Supply Chains",
       description:
-        "Build For global brands. Trusted across industries RePut connected data. supplier data. supplier and regulations into one realtime verifiable platform",
+        "Built for global brands and trusted across industries, Reput connects end-to-end data seamlessly. Supplier data, product origin, regulatory requirements, and authenticity checks all come together in one real-time, verifiable platform.",
     },
   ];
 
