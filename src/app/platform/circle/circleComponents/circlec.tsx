@@ -355,7 +355,7 @@ export default function Circlrc() {
       </section>
 
       {/* Fourth Section */}
-      <div className="min-h-screen mt-5 bg-white flex flex-col md:flex-row">
+      <div className="min-h-screen  bg-white flex flex-col md:flex-row">
         {/* Left Content */}
         <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-12 space-y-6 md:space-y-8 py-8 md:py-0">
           <div className="flex items-center space-x-2">

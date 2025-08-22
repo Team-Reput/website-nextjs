@@ -1,5 +1,6 @@
 
 
+
 // "use client";
 // import React, { useState, useEffect, useCallback, useRef } from "react";
 // import { ReactTyped } from "react-typed";
@@ -7,8 +8,8 @@
 // import { AnimatePresence, motion } from "framer-motion";
 // import { useContact } from "../components/ContactContext";
 
-// import AnimatedOctagon from "./AnimatedOctagon";
-// import Globe3D from "./Globe3D";
+// import AnimatedOctagon from "./AnimatedOctagon";  
+// import Globe3D from "./Globe3D";                 
 // import ComplaintWidget from "./ComplaintWidget";
 
 // type Visual = "octagon" | "globe" | "compliance";
@@ -20,10 +21,10 @@
 //   const leftContents = [
 //     {
 //       heading: "Your Only Source Of Truth For",
-//       typedWords: ["Transparent", "compliance", "Circular", "Sustainability"],
+//       typedWords: ["Transparent", "compliance", "Circular", "Sustainable"], // ✅ added Sustainability
 //       subHeading: "Supply Chains",
 //       description:
-//         "Built for global brands and trusted across industries, Reput connects end-to-end data seamlessly. Supplier data, product origin, regulatory requirements, and authenticity checks all come together in one real-time, verifiable platform.",
+//         "Built for global brands and trusted across industries, Reput connects end-to-end data seamlessly. Supplier data, product origin, regulatory requirements, and authenticity checks all come together in one real-time, verifiable platform.",
 //     },
 //   ];
 
@@ -43,7 +44,7 @@
 //   const wordToVisual = (word: string): Visual => {
 //     const w = word.toLowerCase();
 //     if (w === "circular") return "globe";
-//     if (w === "sustainability") return "globe";
+//     if (w === "sustainability") return "globe"; // ✅ map Sustainability to Globe3D
 //     if (w === "compliance") return "compliance";
 //     return "octagon";
 //   };
@@ -64,24 +65,24 @@
 
 //   return (
 //     <section
-//       className="relative w-full min-h-[90vh] flex items-center justify-center px-4 sm:px-6 md:px-10 lg:px-16 py-10 md:py-16"
+//       className="relative w-full min-h-[90vh] flex items-center justify-center px-[60px] py-[40px]"
 //       style={{
 //         backgroundImage: `url(${backgroundImage})`,
 //         backgroundSize: "cover",
 //         backgroundPosition: "center",
 //       }}
 //     >
-//       <div className="grid grid-cols-1 md:grid-cols-2 items-center max-w-[1280px] w-full gap-10">
+//       <div className="grid grid-cols-1 md:grid-cols-2 items-center max-w-[1280px] w-full">
 //         {/* LEFT CONTENT */}
-//         <div className="space-y-4 text-center md:text-left">
-//           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] leading-snug sm:leading-[44px] md:leading-[52px] lg:leading-[60px] tracking-wide font-bold text-black">
+//         <div className="space-y-[16px] ">
+//           <h1 className="text-[42px] leading-[60px] tracking-wide  font-bold text-black">
 //             {content.heading.split(" ").map((word, i) => (
 //               <span key={i} className={word === "Only" ? "text-green-500" : ""}>
 //                 {word}{" "}
 //               </span>
 //             ))}
 //             <br />
-//             <span className="bg-[#6FFFA9] px-2 py-1 rounded shadow-md inline-block align-middle">
+//             <span className="bg-[#6FFFA9] px-[8px] py-[2px] rounded shadow-md inline-block align-middle">
 //               <div className="first-letter:uppercase">
 //                 <ReactTyped
 //                   typedRef={(instance) => {
@@ -101,21 +102,21 @@
 //             <span className="text-black">{content.subHeading}</span>
 //           </h1>
 
-//           <p className="text-sm sm:text-base md:text-lg text-[#3F3F40] max-w-[520px] mx-auto md:mx-0 font-medium">
+//           <p className="text-[16px] leading-[24px] text-[#3F3F40] max-w-[520px] font-bold">
 //             {content.description}
 //           </p>
 
 //           <button
 //             onClick={scrollToContact}
-//             className="bg-[#6FFFA9] hover:bg-[#5de997] transition text-black px-4 sm:px-6 py-2 sm:py-3 rounded shadow-md font-semibold flex items-center gap-2 w-fit mx-auto md:mx-0 text-sm sm:text-base"
+//             className="bg-[#6FFFA9] hover:bg-[#5de997] transition text-black px-[20px] py-[10px] rounded shadow-md font-semibold flex items-center gap-2 w-fit"
 //           >
 //             See RePut in action →
 //           </button>
 //         </div>
 
 //         {/* RIGHT VISUAL */}
-//         <div className="relative flex justify-center mt-10 md:mt-0 mb-10 md:mb-0">
-//           <div className="relative aspect-square w-60 sm:w-72 md:w-96 lg:w-[520px]">
+//         <div className="relative flex justify-center mt-10 md:mt-0 mb-20">
+//           <div className="relative aspect-square w-[320px] md:w-[420px] lg:w-[520px] ">
 //             <AnimatePresence mode="wait">
 //               {visual === "globe" ? (
 //                 <motion.div
@@ -126,17 +127,19 @@
 //                   animate="animate"
 //                   exit="exit"
 //                 >
+//                   {/* <Globe3D />   */}
 //                   <ComplaintWidget />
 //                 </motion.div>
 //               ) : visual === "compliance" ? (
 //                 <motion.div
 //                   key="compliance"
-//                   className="absolute inset-0 scale-[1.15] md:scale-[1.28]"
+//                   className="absolute inset-0 scale-[1.28] ml-30"
 //                   variants={fadeVariants}
 //                   initial="initial"
 //                   animate="animate"
 //                   exit="exit"
 //                 >
+//                   {/* <ComplaintWidget /> */}
 //                   <Globe3D />
 //                 </motion.div>
 //               ) : (
@@ -165,7 +168,14 @@
 
 
 
-// non-responsive
+
+
+
+
+//resp
+
+
+
 
 "use client";
 import React, { useState, useEffect, useCallback, useRef } from "react";
@@ -187,10 +197,10 @@ export default function HeroSection() {
   const leftContents = [
     {
       heading: "Your Only Source Of Truth For",
-      typedWords: ["Transparent", "compliance", "Circular", "Sustainable"], // ✅ added Sustainability
+      typedWords: ["Transparent", "compliance", "Circular", "Sustainable"],
       subHeading: "Supply Chains",
       description:
-        "Built for global brands and trusted across industries, Reput connects end-to-end data seamlessly. Supplier data, product origin, regulatory requirements, and authenticity checks all come together in one real-time, verifiable platform.",
+        "Built for global brands and trusted across industries, Reput connects end-to-end data seamlessly. Supplier data, product origin, regulatory requirements, and authenticity checks all come together in one real-time, verifiable platform.",
     },
   ];
 
@@ -210,7 +220,7 @@ export default function HeroSection() {
   const wordToVisual = (word: string): Visual => {
     const w = word.toLowerCase();
     if (w === "circular") return "globe";
-    if (w === "sustainability") return "globe"; // ✅ map Sustainability to Globe3D
+    if (w === "sustainability") return "globe";
     if (w === "compliance") return "compliance";
     return "octagon";
   };
@@ -231,24 +241,24 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative w-full min-h-[90vh] flex items-center justify-center px-[60px] py-[40px]"
+      className="relative w-full min-h-[80vh] sm:min-h-[85vh] md:min-h-[90vh] flex items-center justify-center px-4 sm:px-8 md:px-[60px] py-2 sm:py-4 md:py-[40px] overflow-hidden"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center max-w-[1280px] w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center max-w-[1280px] w-full gap-4 md:gap-0">
         {/* LEFT CONTENT */}
-        <div className="space-y-[16px] ">
-          <h1 className="text-[42px] leading-[60px] tracking-wide  font-bold text-black">
+        <div className="space-y-4 sm:space-y-6 md:space-y-[16px] text-center md:text-left">
+          <h1 className="text-[24px] sm:text-[32px] md:text-[42px] leading-[32px] sm:leading-[44px] md:leading-[60px] tracking-wide font-bold text-black">
             {content.heading.split(" ").map((word, i) => (
               <span key={i} className={word === "Only" ? "text-green-500" : ""}>
                 {word}{" "}
               </span>
             ))}
             <br />
-            <span className="bg-[#6FFFA9] px-[8px] py-[2px] rounded shadow-md inline-block align-middle">
+            <span className="bg-[#6FFFA9] px-[6px] sm:px-[8px] py-[2px] rounded shadow-md inline-block align-middle">
               <div className="first-letter:uppercase">
                 <ReactTyped
                   typedRef={(instance) => {
@@ -268,21 +278,23 @@ export default function HeroSection() {
             <span className="text-black">{content.subHeading}</span>
           </h1>
 
-          <p className="text-[16px] leading-[24px] text-[#3F3F40] max-w-[520px] font-bold">
+          <p className="text-[14px] sm:text-[16px] leading-[20px] sm:leading-[24px] text-[#3F3F40] max-w-full sm:max-w-[520px] font-bold mx-auto md:mx-0">
             {content.description}
           </p>
 
-          <button
-            onClick={scrollToContact}
-            className="bg-[#6FFFA9] hover:bg-[#5de997] transition text-black px-[20px] py-[10px] rounded shadow-md font-semibold flex items-center gap-2 w-fit"
-          >
-            See RePut in action →
-          </button>
+          <div className="flex justify-center md:justify-start">
+            <button
+              onClick={scrollToContact}
+              className="bg-[#6FFFA9] hover:bg-[#5de997] transition text-black px-4 sm:px-[20px] py-2 sm:py-[10px] rounded shadow-md font-semibold flex items-center gap-2 w-fit text-sm sm:text-base"
+            >
+              See RePut in action →
+            </button>
+          </div>
         </div>
 
         {/* RIGHT VISUAL */}
-        <div className="relative flex justify-center mt-10 md:mt-0 mb-20">
-          <div className="relative aspect-square w-[320px] md:w-[420px] lg:w-[520px]">
+        <div className="relative flex justify-center mt-0 sm:mt-2 md:mt-0 mb-0 sm:mb-4 md:mb-20 -translate-y-4 sm:-translate-y-2 md:translate-y-0">
+          <div className="relative aspect-square w-[220px] sm:w-[260px] md:w-[420px] lg:w-[520px]">
             <AnimatePresence mode="wait">
               {visual === "globe" ? (
                 <motion.div
@@ -293,25 +305,23 @@ export default function HeroSection() {
                   animate="animate"
                   exit="exit"
                 >
-                  {/* <Globe3D />   */}
                   <ComplaintWidget />
                 </motion.div>
               ) : visual === "compliance" ? (
                 <motion.div
                   key="compliance"
-                  className="absolute inset-0 scale-[1.28] ml-30"
+                  className="absolute inset-0 scale-[1.1] sm:scale-[1.2] md:scale-[1.28] ml-0 sm:ml-4 md:ml-30"
                   variants={fadeVariants}
                   initial="initial"
                   animate="animate"
                   exit="exit"
                 >
-                  {/* <ComplaintWidget /> */}
                   <Globe3D />
                 </motion.div>
               ) : (
                 <motion.div
                   key="octagon"
-                  className="absolute inset-0"
+                  className="absolute inset-0 -translate-y-45 sm:-translate-y-20 md:translate-y-0"
                   variants={fadeVariants}
                   initial="initial"
                   animate="animate"
@@ -327,7 +337,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
-
-
-
