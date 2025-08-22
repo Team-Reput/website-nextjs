@@ -131,7 +131,7 @@ export default function IndustryTransformations() {
       color: "from-yellow-400 to-amber-400"
     },
     {
-      title: "Pharmacy",
+      title: "Pharmaceutical",
       description: "Ensuring pharmaceutical products are traceable, safe, and compliant with regulations, from manufacturing to delivery.",
       img: "/pharma.jpg",
       color: "from-yellow-400 to-amber-400"

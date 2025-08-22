@@ -367,7 +367,7 @@ export default function Footer() {
 
             <h3 className="mb-4 font-semibold">Technologies</h3>
             <ul className="space-y-2 text-sm">
-              <li>Anomly  Detection</li>
+              <li>Anomaly  Detection</li>
               <li>Compliance Assurance</li>
               <li>Risk Mapping</li>
               <li>AI Based Insides</li>
