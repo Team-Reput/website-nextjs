@@ -232,7 +232,8 @@ export default function Footer() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Image
-              src="/newLogoWhite.png"
+              // src="/newLogoWhite.png"
+              src="/newreput.png"
               alt="RePut.ai"
               width={120}
               height={40}

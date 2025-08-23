@@ -450,8 +450,8 @@ export default function ScheduleForm() {
           <button
             onClick={handleSubmit}
             disabled={isSubmitting}
-            className={`text-white px-5 sm:px-6 py-2 sm:py-3 rounded-md font-semibold transition w-full sm:w-fit mt-2 text-sm sm:text-base ${
-              isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#0b1d3b] hover:bg-opacity-90'
+            className={`text-black px-5 sm:px-6 py-2 sm:py-3 rounded-md font-semibold transition w-full sm:w-fit mt-2 text-sm sm:text-base ${
+              isSubmitting ? 'bg-green-600 cursor-not-allowed' : 'bg-green-500 hover:bg-opacity-90'
             }`}
           >
             {isSubmitting ? 'Submitting...' : 'Talk to an expert →'}

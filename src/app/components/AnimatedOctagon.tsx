@@ -394,7 +394,7 @@ export default function AnimatedOctagon() {
                 alt="f1"
                 width={50}
                 height={50}
-                className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-xl shadow-lg"
+                className="w-10 h-6 sm:w-12 sm:h-12 md:w-16 md:h-14 lg:w-20  rounded-xl shadow-lg"
               />
             </div>
           </div>
@@ -407,7 +407,7 @@ export default function AnimatedOctagon() {
                 alt="f2"
                 width={50}
                 height={50}
-                className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-xl shadow-lg"
+                className="w-10 h-6 sm:w-12 sm:h-12 md:w-16 md:h-14 lg:w-20  rounded-xl shadow-lg"
               />
             </div>
           </div>
@@ -420,7 +420,7 @@ export default function AnimatedOctagon() {
                 alt="f3"
                 width={50}
                 height={50}
-                className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-xl shadow-lg"
+                className="w-10 h-6 sm:w-12 sm:h-12 md:w-16 md:h-14 lg:w-20  rounded-xl shadow-lg"
               />
             </div>
           </div>

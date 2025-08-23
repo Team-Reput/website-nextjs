@@ -151,6 +151,20 @@ export default function Globe3D() {
           style={{ objectFit: "contain", transform: "scale(0.94)" }}
         />
       </div>
+
+      <div
+        className="absolute w-1/3 h-1/3 z-20"
+        style={{ bottom: "50%", right: "-60%" }}
+      >
+        <Image
+          src="/ghgearth.png"
+          alt="c"
+          fill
+          priority
+          className="pointer-events-none select-none"
+          style={{ objectFit: "contain", transform: "scale(0.94)" }}
+        />
+      </div>
     </div>
   );
 }

@@ -23,11 +23,12 @@ export default function FoodDashboardSection() {
           {/* Laptop mockup */}
           <div className="relative z-10 transform transition-transform hover:scale-105 duration-300">
             <Image
-              src="/lphoneFood.png"
+              // src="/lphoneFood.png"
+              src="/newlap.png"
               alt="Laptop Dashboard"
               width={400}
               height={200}
-              className="drop-shadow-2xl"
+              className="drop-shadow-2xl  scale-[1.25]"
             />
             {/* Phone overlay */}
             {/* <div className="absolute top-6 right-[-40px] md:right-[-50px] transform hover:scale-105 transition duration-300">

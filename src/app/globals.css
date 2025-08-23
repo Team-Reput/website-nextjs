@@ -8,8 +8,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-montserrat);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,30 +21,18 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
-
-
 
 @layer utilities {
-  .animate-spin-slow { animation: spin 20s linear infinite }
+  .animate-spin-slow { 
+    animation: spin 20s linear infinite 
+  }
 }
-
-
-
 
 html {
   scroll-behavior: smooth;
 }
-
-
-@font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Medium.woff2') format('woff2');
-  font-weight: 500; /* Medium */
-  font-style: normal;
-}
-
 
 .shimmer-gold {
   position: relative;
@@ -74,8 +61,6 @@ html {
   }
 }
 
-
-
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -91,36 +76,29 @@ html {
   animation: marquee 25s linear infinite;
 }
 
-
-
-/* 👑 Royal Minimal Scrollbar */
+/* Royal Minimal Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;               /* little thicker, feels premium */
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;        /* light grey background */
+  background: #f1f1f1;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #b5b5b5;        /* soft grey handle */
+  background: #b5b5b5;
   border-radius: 10px;
-  border: 2px solid #f1f1f1;  /* adds spacing effect */
+  border: 2px solid #f1f1f1;
   transition: all 0.3s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8c8c8c;        /* darker on hover */
+  background: #8c8c8c;
 }
 
 /* Firefox support */
 * {
   scrollbar-width: thin;
   scrollbar-color: #b5b5b5 #f1f1f1;
-}
-
-/* Smooth scrolling everywhere */
-html {
-  scroll-behavior: smooth;
 }

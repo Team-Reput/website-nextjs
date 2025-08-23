@@ -34,7 +34,7 @@ module.exports = {
         'spin-slow': 'spin 20s linear infinite', // needed for your class
       },
       fontFamily: {
-      gilroy: ['Gilroy', 'sans-serif'],
+      sans: ['var(--font-montserrat)', 'system-ui', 'sans-serif'],
     },
     },
   },

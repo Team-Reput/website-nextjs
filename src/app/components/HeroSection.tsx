@@ -251,7 +251,7 @@ export default function HeroSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 items-center max-w-[1280px] w-full gap-4 md:gap-0">
         {/* LEFT CONTENT */}
         <div className="space-y-4 sm:space-y-6 md:space-y-[16px] text-center md:text-left">
-          <h1 className="text-[24px] sm:text-[32px] md:text-[42px] leading-[32px] sm:leading-[44px] md:leading-[60px] tracking-wide font-bold text-black">
+          <h1 className="text-[24px] sm:text-[32px] md:text-[38px] leading-[32px] sm:leading-[44px] md:leading-[60px] tracking-wide font-bold text-black">
             {content.heading.split(" ").map((word, i) => (
               <span key={i} className={word === "Only" ? "text-green-500" : ""}>
                 {word}{" "}
@@ -268,6 +268,7 @@ export default function HeroSection() {
                   typeSpeed={80}
                   backSpeed={36}
                   backDelay={5000}
+                  // backDelay={500000}
                   smartBackspace
                   loop
                   showCursor={false}
