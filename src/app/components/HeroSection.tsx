@@ -311,7 +311,7 @@ export default function HeroSection() {
               ) : visual === "compliance" ? (
                 <motion.div
                   key="compliance"
-                  className="absolute inset-0 scale-[1.1] sm:scale-[1.2] md:scale-[1.28] ml-0 sm:ml-4 md:ml-30"
+                  className="absolute inset-0 scale-[1.5] sm:scale-[1.2] md:scale-[1.28] ml-0 sm:ml-4 md:ml-30"
                   variants={fadeVariants}
                   initial="initial"
                   animate="animate"
