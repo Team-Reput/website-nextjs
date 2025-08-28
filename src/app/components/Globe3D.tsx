@@ -118,7 +118,7 @@ export default function Globe3D() {
         fill
         priority
         className="pointer-events-none select-none z-10"
-        style={{ objectFit: "contain", transform: "scale(0.94)" }}
+        style={{ objectFit: "contain", transform: "scale(0.91)" }}
       />
 
       {/* LEFT BADGE */}
