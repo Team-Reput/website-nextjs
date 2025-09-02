@@ -254,7 +254,7 @@ const navItems = [
   { label: "Compliance", hasDropdown: true },
   { label: "Platform", hasDropdown: true },
   { label: "Industries", hasDropdown: true },
-  { label: "Why RePut", href: "/whyreput", hasDropdown: false },
+  // { label: "Why RePut", hasDropdown: true },
   { label: "About RePut", href: "/about" },
   { label: "News", href: "/news" },
   { label: "Policies", href: "/policie" }
@@ -275,6 +275,12 @@ const complianceItems = [
   {label: "CBAM-Carbon Border Adjustment Mechanism" , href: "/compliance/cbam" ,  image: "/cbam_icon.png" },
   {label: "BRSR-Business Responsibility and Sustainability Reporting" , href: "/compliance/brsr" , image: "/brsr_icon.png" },
   {label: "EUDR-European Union Deforestation Regulation" , href: "/compliance/eudr" , image: "/eudr_icon.png" }
+]
+
+const whyReputItems = [
+  {label:"Tracechain"  ,href:"/whyreput/whytracechain", image:"/chain.png"},
+  {label:"Zero Carbon" ,href:"/whyreput/whyzerocarbon", image:"/chain.png"},
+  {label:"RePut Circle",href:"/whyreput/reputcircle"  , image:"/chain.png"},
 ]
 
 export default function Navbar() {
@@ -404,6 +410,33 @@ export default function Navbar() {
                       ))}
                     </div>
                   )}
+
+
+                  {/* Why Reput */}
+                    {item.label === "Why RePut" && (
+                    <div className="flex flex-col gap-3 w-96">
+                      {whyReputItems.map(whyReput => (
+                        <Link 
+                          key={whyReput.label} 
+                          href={whyReput.href}
+                          prefetch={true} 
+                          className="flex items-center gap-2 p-3 hover:bg-[#E4FFE9] rounded-lg text-sm text-[#29442C]"
+                        >
+                          <Image 
+                            src={whyReput.image} 
+                            alt={whyReput.label} 
+                            width={38} 
+                            height={28} 
+                            className="rounded"
+                            
+                          />
+                          {whyReput.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+
+
                 </div>
               )}
             </div>
