@@ -85,7 +85,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useContact } from "./ContactContext";
+import { useContact } from "./ContactContext"; 
 
 export default function SimpleBanner() {
   const { scrollToContact } = useContact();

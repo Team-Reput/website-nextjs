@@ -1,0 +1,132 @@
+
+"use client";
+import Image from "next/image";
+import { useContact } from "../../../components/ContactContext"; 
+
+
+
+
+const advantages = [
+  {
+    title: "Commodity Scope Analysis:",
+    desc: "Review your existing ESG disclosures, policies, and data systems against BRSR’s nine principles.",
+    // icon: "/onecard.png",
+    icon: "/e1.png",
+  },
+  {
+    title: "Supply Chain Mapping:",
+    desc: "Trace all suppliers down to farm or plot level.",
+    // icon: "/twocard.png",
+    icon: "/e2.png",
+  },
+  {
+    title: "Geolocation Data Integration:",
+    desc: "Capture, store, and manage GPS coordinates in compliance with EU rules.",
+    // icon: "/thirdcard.png",
+    icon: "/e4.png",
+  },
+  {
+    title: "Risk Assessment Automation:",
+    desc: "Evaluate deforestation risk based on satellite data and external watchlists.",
+    // icon: "/fourcard.png",
+    icon: "/e3.png",
+  },
+  {
+    title: "Due Diligence Statement Generator:",
+    desc: "Auto-create EU-compliant declarations.",
+    // icon: "/cbam_icon.png",
+    icon: "/e5.png",
+  },
+  {
+    title: "Training & Knowledge Support:",
+    desc: "Build internal expertise to maintain long-term compliance.",
+    // icon: "/sixcard.png",
+    icon: "/e6.png",
+  },
+];
+
+
+
+
+
+
+export default function EudrAdvantage() {
+      const { scrollToContact } = useContact(); 
+
+  return (
+    <section className="bg-white w-full px-4 sm:px-6 md:px-10 py-12 md:py-16">
+      {/* Heading */}
+      <div className="max-w-6xl mx-auto  mb-12 px-2 text-left">
+        <h1 className="text-[48px] sm:text-3xl lg:text-[48px] font-bold text-black mb-4 w-[744px]">
+          EUDR compliance can be complex, 
+ <span className="text-[#008000]">but RePut makes it simple:</span>
+        </h1>
+
+      </div>
+
+      <div className="w-[1026px] h-[90px] mx-40 flex justify-start  text-left">
+        <p className="text-[36px] sm:text-base md:text-[36px] text-black">
+          How We Help – EUDR Readiness Package
+        </p>
+
+      </div>
+
+      {/* Grid of Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto mt-16">
+        {advantages.map((adv, index) => (
+          <div
+            key={index}
+            className="relative bg-green-900 text-white rounded-xl shadow-lg hover:scale-105 transform transition duration-300 p-6 sm:p-8 md:p-9"
+            style={{ boxShadow: "0px 0px 15px 2px rgba(0,255,0,0.4)" }}
+          >
+            {/* Text Content */}
+            <h3 className="text-base sm:text-[21px] md:text-[21px] font-bold mb-3 mt-9">
+              {adv.title}
+            </h3>
+            <p className="text-[21px]  sm:text-[21px] md:text-base text-gray-200 leading-relaxed">
+              {adv.desc}
+            </p>
+
+            {/* Diagonal Top-Right with Icon */}
+            <div className="absolute top-0  right-0 w-32 h-32 sm:w-30 sm:h-30  overflow-hidden">
+              <div className="w-full h-full bg-white clip-diagonal flex items-start justify-end">
+                <Image
+                  src={adv.icon}
+                  alt={adv.title}
+                  width={40}
+                  height={40}
+                  className="absolute top-3 right-3"
+                />
+              </div>
+            </div>
+          </div>
+        ))}
+
+
+      </div>
+
+      {/* Button */}
+
+      <div className="mt-10 flex justify-start top-35 mx-auto ml-36">
+        <button             onClick={scrollToContact} className="px-5 sm:px-6 py-2  sm:py-3 bg-black text-white rounded-lg shadow hover:bg-gray-800 flex items-center gap-2 transition text-sm sm:text-base">
+          Discuss Our  EUDR Regulation Reediness Package Today →
+        </button>
+      </div>
+
+
+      {/* Custom CSS for Diagonal Cut */}
+      <style jsx>{`
+        .clip-diagonal {
+          clip-path: polygon(100% 0, 100% 100%, 0 0);
+        }
+      `}</style>
+    </section>
+  );
+}
+
+
+
+
+
+
+ 

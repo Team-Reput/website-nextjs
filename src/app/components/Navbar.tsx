@@ -251,8 +251,10 @@ import { SetStateAction, useState } from "react";
 
 const navItems = [
   { label: "Home", href: "/", hasDropdown: false },
+  { label: "Compliance", hasDropdown: true },
   { label: "Platform", hasDropdown: true },
   { label: "Industries", hasDropdown: true },
+  { label: "Why RePut", href: "/whyreput", hasDropdown: false },
   { label: "About RePut", href: "/about" },
   { label: "News", href: "/news" },
   { label: "Policies", href: "/policie" }
@@ -268,6 +270,12 @@ const platformItems = [
   { label: "Zero Carbon", href: "/platform/zerocarbon", image: "/e.png" },
   { label: "RePut Circle", href: "/platform/circle", image: "/rc.png" },
 ];
+
+const complianceItems = [
+  {label: "CBAM-Carbon Border Adjustment Mechanism" , href: "/compliance/cbam" ,  image: "/cbam_icon.png" },
+  {label: "BRSR-Business Responsibility and Sustainability Reporting" , href: "/compliance/brsr" , image: "/brsr_icon.png" },
+  {label: "EUDR-European Union Deforestation Regulation" , href: "/compliance/eudr" , image: "/eudr_icon.png" }
+]
 
 export default function Navbar() {
   const { scrollToContact } = useContact();
@@ -367,6 +375,31 @@ export default function Navbar() {
                             className="rounded"
                           />
                           {platform.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+
+
+                  {/* Compliance Dropdown */}
+                  {item.label === "Compliance" && (
+                    <div className="flex flex-col gap-3 w-96">
+                      {complianceItems.map(compliance => (
+                        <Link 
+                          key={compliance.label} 
+                          href={compliance.href}
+                          prefetch={true} 
+                          className="flex items-center gap-2 p-3 hover:bg-[#E4FFE9] rounded-lg text-sm text-[#29442C]"
+                        >
+                          <Image 
+                            src={compliance.image} 
+                            alt={compliance.label} 
+                            width={38} 
+                            height={28} 
+                            className="rounded"
+                            
+                          />
+                          {compliance.label}
                         </Link>
                       ))}
                     </div>

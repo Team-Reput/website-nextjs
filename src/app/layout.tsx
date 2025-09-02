@@ -14,7 +14,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Reput.ai",
+  title: "RePut.ai",
   description: "Sustainability",
 };
 
