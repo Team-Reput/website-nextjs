@@ -23,7 +23,7 @@ export default function BrsrStructure() {
   return (
     <div className="min-h-screen bg-[#F9FEFA] p-8">
       {/* Header */}
-      <div className="flex justify-between items-start mb-12 ml-30 text-[48px]">
+      <div className="flex justify-between items-start mb-12 ml-38 text-[48px]">
         <div className="w-[836px]">
           <h1 className="text-2xl md:text-3xl  text-[#0C0E10] font-bold">
             The Structure of the BRSR Lite  &

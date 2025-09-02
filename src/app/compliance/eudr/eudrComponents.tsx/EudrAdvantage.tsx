@@ -56,19 +56,17 @@ export default function EudrAdvantage() {
   return (
     <section className="bg-white w-full px-4 sm:px-6 md:px-10 py-12 md:py-16">
       {/* Heading */}
-      <div className="max-w-6xl mx-auto  mb-12 px-2 text-left">
-        <h1 className="text-[48px] sm:text-3xl lg:text-[48px] font-bold text-black mb-4 w-[744px]">
-          EUDR compliance can be complex, 
- <span className="text-[#008000]">but RePut makes it simple:</span>
+      <div className="max-w-6xl ml-32  mb-12 px-2 text-start ">
+        <h1 className="text-[48px]  text-start w-[1100px] sm:text-3xl lg:text-[48px] font-bold text-black mb-4 ">
+          EUDR compliance can be complex, <br/>
+          <span className="text-[#008000]">but RePut makes it simple:</span>
         </h1>
-
       </div>
 
-      <div className="w-[1026px] h-[90px] mx-40 flex justify-start  text-left">
+      <div className="w-[1026px] h-[50px] mx-35 flex justify-start  text-left">
         <p className="text-[36px] sm:text-base md:text-[36px] text-black">
           How We Help – EUDR Readiness Package
         </p>
-
       </div>
 
       {/* Grid of Cards */}

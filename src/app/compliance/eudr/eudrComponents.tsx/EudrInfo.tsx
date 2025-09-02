@@ -9,8 +9,8 @@ export default function EudrInfo() {
 
   return (
     <>
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white text-black px-6 py-12">
-      <div className="w-[1100px] text-base md:text-[22px] leading-relaxed">
+    <div className="min-h-screen flex flex-col items-start justify-start bg-white text-black px-6 py-12">
+      <div className="w-[1100px] ml-30 text-base md:text-[22px] leading-relaxed">
         <p className="mb-6">
           The EU is one of the largest importers of agricultural and forest commodities globally, sourcing vast quantities of cattle, cocoa, coffee, palm oil, rubber, soy, and wood from multiple regions. With growing consumer and regulatory demand for deforestation-free products, the EU has introduced the EU Deforestation Regulation (EUDR) to ensure that goods placed on its market are not linked to deforestation or forest degradation occurring after 31 December 2020.
         </p>
@@ -75,7 +75,7 @@ export default function EudrInfo() {
       </div>
 
       {/* Regulation Purpose Section */}
-      <div className="max-w-4xl w-full mt-16">
+      <div className="max-w-4xl w-full mt-16 mr-70">
         <h3 className="text-[36px] md:text-[36px] font-semibold mb-4">
           Purpose of  <span className="text-green-600">EUDR </span>
         </h3>

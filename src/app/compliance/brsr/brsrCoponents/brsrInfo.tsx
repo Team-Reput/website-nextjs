@@ -11,9 +11,9 @@ export default function BrsrInfo() {
 
   return (
     <>
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white text-black px-6 py-12">
-      <div className="w-[1100px] text-base md:text-[22px] leading-relaxed">
-        <p className="mb-6">
+    <div className="h-[500px] flex flex-col items-center justify-start bg-white text-black px-10 py-12">
+      <div className="w-[1100px] text-base md:text-[22px] leading-relaxed mr-10">
+        <p className="mb-6 w-[1100px]">
           India is aligning corporate reporting with global ESG standards to attract sustainable investment and improve corporate governance. BRSR brings structured ESG disclosure into mainstream compliance, ensuring investors and regulators have access to reliable sustainability data.
 
           {/* <span className="font-bold">
@@ -30,7 +30,7 @@ export default function BrsrInfo() {
 
 
 
-        <p className="mb-6 text-[22px]">
+        <p className="mb-6 w-[1100px] text-[22px]">
           While initially applied to the top 1,000 listed entities, BRSR sets the stage for broader ESG adoption across industries. Early adoption helps companies improve transparency, manage non-financial risks, and prepare for integration with global sustainability reporting frameworks like GRI, SASB, and ISSB.
 
           
@@ -89,7 +89,7 @@ export default function BrsrInfo() {
       </div>
 
       {/* Regulation Purpose Section */}
-      <div className="max-w-4xl w-full mt-16">
+      <div className="max-w-4xl w-full mt-16 mr-62">
         <h3 className="text-2xl md:text-3xl font-semibold mb-4">
           Purpose of  <span className="text-green-600">BRSR </span>
         </h3>

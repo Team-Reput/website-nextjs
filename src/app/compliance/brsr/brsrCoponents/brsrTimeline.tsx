@@ -10,9 +10,9 @@ export default function BrsrTimeline() {
 
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#EAFCF3]">
+    <div className="flex flex-col items-start justify-center min-h-screen bg-[#EAFCF3]">
       {/* Heading */}
-      <h1 className="text-[48px] md:text-4xl font-bold text-center text-black w-[1222px] px-4">
+      <h1 className="text-[48px] text-start md:text-4xl font-bold  text-black w-[1222px] px-4 ml-38">
        Does my business meet BRSR’s phased <br/>  {"                         "}
         <span className="text-green-700">compliance requirements?</span>
       </h1>
@@ -29,7 +29,7 @@ export default function BrsrTimeline() {
       </div>
 
       {/* Button */}
-      <div className="w-full max-w-6xl justify-start mt-10">
+      <div className="w-full max-w-6xl justify-start mt-10 ml-45">
         <button onClick={scrollToContact} className="px-6 py-3    bg-black text-white rounded-lg shadow-lg hover:bg-gray-800 transition">
           Know more →
         </button>

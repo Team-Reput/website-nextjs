@@ -48,17 +48,17 @@ export default function AdvantagesSectionComp() {
   const { scrollToContact } = useContact(); 
 
   return (
-    <section className="bg-white w-full px-4 sm:px-6 md:px-10 py-12 md:py-16">
+    <section className="bg-white  px-4 sm:px-6 md:px-10 py-12 md:py-16">
       {/* Heading */}
-      <div className="max-w-6xl mx-auto text-center mb-12 px-2">
-        <h1 className="text-[48px] sm:text-3xl lg:text-[48px] font-bold text-black mb-4 w-[744px]">
-          CBAM compliance <span className="text-[#008000]">doesn’t have to be overwhelming.</span>
+      <div className="w-[1200px] ml-25 text-start mb-12 px-2 ">
+        <h1 className="text-[48px] text-start sm:text-3xl lg:text-[48px] font-bold text-black mb-4 w-[1100px]">
+          CBAM compliance <span className="text-[#008000]">doesn’t have <br/> to be overwhelming.</span>
         </h1>
 
       </div>
 
-      <div className="w-[1026px] h-[90px] mx-48 flex justify-start mb-12 ">
-        <p className="text-[36px] sm:text-base md:text-[36px] text-black  ">
+      <div className="w-[1100px]  h-[90px] mx-28 flex justify-start mb-12 ">
+        <p className="text-[36px] sm:text-base md:text-[36px] text-black ">
           Prepare to meet CBAM obligations within 3 months with the RePut.ai CBAM Readiness Package, including:
         </p>
       </div>

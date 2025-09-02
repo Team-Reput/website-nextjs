@@ -8,9 +8,9 @@ export default function CbamInfo() {
 
   return (
     <>
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white text-black px-6 py-12">
-      <div className="max-w-4xl text-base md:text-lg leading-relaxed">
-        <p className="mb-6">
+    <div className="min-h-screen flex flex-col items-start  justify-start bg-white text-black px-6 py-12">
+      <div className="max-w-4xl ml-32 w-[1100px] text-base md:text-lg leading-relaxed">
+        <p className="mb-6 w-[1100px]">
           The <span className="font-bold">Carbon Border Adjustment Mechanism (CBAM)</span> 
           is at the heart of this transformation. It targets{" "}
           <span className="font-bold">
@@ -25,7 +25,7 @@ export default function CbamInfo() {
           effectively levelling the playing field.
         </p>
 
-        <p className="mb-6">
+        <p className="mb-6 w-[1100px]">
           For exporters, this means that{" "}
           <span className="font-bold">
             embedded carbon emissions are no longer a background sustainability issue — they are now a trade compliance requirement
@@ -33,7 +33,7 @@ export default function CbamInfo() {
           . Companies will need to:
         </p>
 
-        <ul className="list-disc list-inside mb-6 space-y-2">
+        <ul className="w-[1100px] list-disc list-inside mb-6 space-y-2">
           <li>
             <span className="font-bold">Calculate and disclose</span> emissions embedded in their products using EU-approved methodologies.
           </li>
@@ -45,14 +45,14 @@ export default function CbamInfo() {
           </li>
         </ul>
 
-        <p className="mb-6">
+        <p className="mb-6 w-[1100px]">
           Failure to meet these requirements could result in penalties, reputational damage, and even{" "}
           <span className="font-bold">loss of market access</span>. At the same time, proactive compliance offers opportunities 
           to <span className="font-bold">differentiate products as low-carbon alternatives</span>, attract ESG–conscious buyers, 
           and <span className="font-bold">strengthen supply chain transparency</span>.
         </p>
 
-        <p className="mb-6">
+        <p className="mb-6 w-[1100px]">
           In a rapidly decarbonising global economy, aligning with CBAM is not just about avoiding trade barriers — 
           it’s about securing long–term competitiveness in one of the world’s most regulated and climate–driven markets.
         </p>
@@ -114,11 +114,11 @@ export default function CbamInfo() {
       </div>
 
      
-      <div className="max-w-4xl w-full mt-16">
+      <div className="max-w-4xl w-full mt-16 text-start mr-80">
         <h3 className="text-2xl md:text-3xl font-semibold mb-4">
           Regulation <span className="text-green-600">Purpose</span>
         </h3>
-        <p className="text-sm md:text-base text-gray-800 leading-relaxed mb-4">
+        <p className="text-sm md:text-base text-gray-800 leading-relaxed mb-4 w-[1097px]">
           The <span className="font-bold">CBAM is the EU’s flagship</span>{" "}
           carbon trade regulation designed to{" "}
           <span className="font-bold">prevent “carbon leakage”</span> by
@@ -134,7 +134,12 @@ export default function CbamInfo() {
           reporting obligations starting from 2023.
         </p>
       </div>
+
     </div>
+
+
+
+      
 
     </>
   );

@@ -1,4 +1,3 @@
-// ✅ Must have a default export
 export default function CompliancePage() {
   return (
     <div>
@@ -7,3 +6,5 @@ export default function CompliancePage() {
     </div>
   );
 }
+  
+

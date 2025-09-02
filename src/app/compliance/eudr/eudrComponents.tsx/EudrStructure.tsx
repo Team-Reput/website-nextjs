@@ -12,7 +12,7 @@ export default function EudrStructure() {
       {/* Header */}
       <div className="flex justify-between items-start mb-12 ml-30 text-[48px]">
         <div className="w-[836px]">
-          <h1 className="text-2xl md:text-3xl  text-[#0C0E10] font-bold">
+          <h1 className="text-2xl ml-8 md:text-3xl text-[#0C0E10] font-bold">
             The Structure of the EUDR Lite  &
             <br/>
             Full EUDR
