@@ -34,7 +34,6 @@
 
 
 
-// seo.config.ts
 export const siteConfig = {
   // Basic site information
   name: "RePut", // Your site name
