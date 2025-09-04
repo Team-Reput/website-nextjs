@@ -4,8 +4,20 @@
 
 // import Image from "next/image";
 import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export default function HomeCircle() {
+
+
+      const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.5; 
+    }
+  }, []);
+
+
   return (
     <section className="relative w-full h-[100vh] bg-[#b4ccbd]">
       {/* Background Image */}
@@ -51,11 +63,15 @@ export default function HomeCircle() {
 
             <div className="w-[100vh] h-[100vh] top-5 left-20 bottom-40 md:h-[100vh] lg:h-[100vh] relative">
               <video
+                ref={videoRef}
                 src="/whyCircular.mp4"
                 autoPlay
                 muted
                 loop
                 playsInline
+                onLoadedMetadata={() => {
+              if (videoRef.current) videoRef.current.playbackRate = 0.5;
+            }}
                 className="absolute  w-full h-full object-contain"
               />
             </div>
