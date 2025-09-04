@@ -272,13 +272,13 @@ export default function EUSection() {
           hover:scrollbar-thumb-[#2E7D32] scrollbar-thumb-rounded-full scroll-smooth"
         >
           <h4 className="text-lg sm:text-xl font-bold text-gray-900">
-            Why We Built RePut
+            Why We Build RePut
           </h4>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 leading-snug">
             Build For Making Companies <br className="hidden sm:block" /> Future Ready
           </h2>
           <p className="text-gray-700 text-sm sm:text-base mb-3 leading-relaxed">
-            In today's world supply chain is more complex than ever full of
+            In today&apos;s world supply chain is more complex than ever full of
             blind spots, from unverifiable sourcing claims to invisible carbon
             emissions and unchecked waste.
           </p>

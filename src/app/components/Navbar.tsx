@@ -254,7 +254,7 @@ const navItems = [
   { label: "Compliance", hasDropdown: true },
   { label: "Platform", hasDropdown: true },
   { label: "Industries", hasDropdown: true },
-  // { label: "Why RePut", hasDropdown: true },
+  { label: "Why RePut", hasDropdown: true },
   { label: "About RePut", href: "/about" },
   { label: "News", href: "/news" },
   { label: "Policies", href: "/policie" }
@@ -279,8 +279,8 @@ const complianceItems = [
 
 const whyReputItems = [
   {label:"Tracechain"  ,href:"/whyreput/whytracechain", image:"/chain.png"},
-  {label:"Zero Carbon" ,href:"/whyreput/whyzerocarbon", image:"/chain.png"},
-  {label:"RePut Circle",href:"/whyreput/reputcircle"  , image:"/chain.png"},
+  {label:"Zero Carbon" ,href:"/whyreput/whyzerocarbon", image:"/e.png"},
+  {label:"RePut Circle",href:"/whyreput/whyreputcircle"  , image:"/rc.png"},
 ]
 
 export default function Navbar() {
@@ -308,8 +308,8 @@ export default function Navbar() {
             src="/logonew.png" 
             alt="RePut" 
             width={120} 
-            height={30}
-            className="sm:w-[140px] sm:h-[35px]"
+            height={50}
+            className="sm:w-[140px] sm:h-[45px]"
           />
         </Link>
 
@@ -414,7 +414,7 @@ export default function Navbar() {
 
                   {/* Why Reput */}
                     {item.label === "Why RePut" && (
-                    <div className="flex flex-col gap-3 w-96">
+                    <div className="flex flex-col gap-3 w-60">
                       {whyReputItems.map(whyReput => (
                         <Link 
                           key={whyReput.label} 

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cubes Animation with Text Fade-In, Hand & ESG Circle</title>
+<style>
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: white;
+    overflow: hidden;
+  }
+
+  /* Base container */
+  .base {
+    position: relative;
+    width: 900px;
+    height: 850px;
+    background: url("base-image.png") no-repeat center/contain;
+  }
+
+  /* Cube layer */
+  .cube {
+    position: absolute;
+    width: 600px;
+    height: 700px;
+    background: url("cube-img2.png") no-repeat center/contain;
+    top: -1000px;  /* start above */
+    left: -50px;
+    opacity: 0;
+    filter: drop-shadow(0 5px 10px rgba(251, 251, 251, 0.4));
+    z-index: 2;
+  }
+
+  /* ESG Circle image */
+  .circle-esg {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: url("circle-esg.png") no-repeat center/contain; /* corrected name */
+    top: 50px;   /* final position */
+    left: 250px;
+    opacity: 0;   /* start invisible */
+    filter: drop-shadow(0 5px 10px rgba(255,255,255,0.3));
+    z-index: 2;
+  }
+
+  /* Text image layer (fade-in) */
+  .text-layer {
+    position: absolute;
+    width: 600px;
+    height: 700px;
+    background: url("text-layer 2.png") no-repeat center/contain;
+    top: -30px;
+    left: 150px;
+    margin-left:80px;
+    margin-top:90px;
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  /* Hand (fade-in) */
+  .hand {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    right: -100px;
+    bottom: 500px;
+    margin-left:120px;
+    background: url("handmobilefrombehind2top-animate.png") no-repeat center/contain;
+    opacity: 0;
+    filter: brightness(1.05) contrast(1.05);
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+  <div class="base">
+    <!-- Cube -->
+    <div class="cube"></div>
+
+    <!-- ESG Circle -->
+    <div class="circle-esg"></div>
+
+    <!-- Text image layer -->
+    <div class="text-layer"></div>
+
+    <!-- Hand -->
+    <div class="hand"></div>
+  </div>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script>
+    const tl = gsap.timeline();
+
+    // Step 1: Cube falls with bounce
+    tl.to(".cube", {
+      top: 30,
+      left: 80,
+      opacity: 1,
+      duration: 2,
+      ease: "bounce.out"
+    });
+
+    // Step 2: ESG Circle fades in (no movement)
+   tl.to([".circle-esg", ".text-layer", ".hand"] ,{
+      opacity: 1,
+      duration:1.5,
+      ease: "power1.out"
+    }, "+=0.3");
+
+    // Step 3: Fade in text and hand simultaneously
+    tl.to([".text-layer", ".hand"], {
+      opacity: 1,
+      duration: 1.5,
+      ease: "power1.out"
+    }, "+=0.2");
+  </script>
+</body>
+</html>
