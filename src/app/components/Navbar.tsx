@@ -255,8 +255,9 @@ const navItems = [
   { label: "Platform", hasDropdown: true },
   { label: "Industries", hasDropdown: true },
   { label: "Why RePut", hasDropdown: true },
+  { label: "Resources", hasDropdown: true },
   { label: "About RePut", href: "/about" },
-  { label: "News", href: "/news" },
+  // { label: "News", href: "/news" },
   { label: "Policies", href: "/policie" }
 ];
 
@@ -281,6 +282,13 @@ const whyReputItems = [
   {label:"Tracechain"  ,href:"/whyreput/whytracechain", image:"/chain.png"},
   {label:"Zero Carbon" ,href:"/whyreput/whyzerocarbon", image:"/e.png"},
   {label:"RePut Circle",href:"/whyreput/whyreputcircle"  , image:"/rc.png"},
+]
+
+
+const resourcesItems = [
+  {label:"News letter" , href:"/news",image:"/news.png"},
+  {label:"Case studies" , href:"/resources/casestudies",image:"/case.png"},
+  // {label:"Blogs & Articles" , href:"/resources/blogs",image:"/e.png"},
 ]
 
 export default function Navbar() {
@@ -342,7 +350,8 @@ export default function Navbar() {
                   
                   {/* Industries Dropdown */}
                   {item.label === "Industries" && (
-                    <div className="grid grid-cols-2 gap-2 w-64 text-[#29442C]">
+                    // <div className="grid grid-cols-2 gap-2 w-64 text-[#29442C]">
+                    <div className="flex flex-col  gap-3 w-64 text-[#29442C]">
                       {industriesItems.map(industry => (
                         <Link 
                           key={industry.label} 
@@ -365,7 +374,8 @@ export default function Navbar() {
 
                   {/* Platform Dropdown */}
                   {item.label === "Platform" && (
-                    <div className="grid grid-cols-2 gap-4 w-96">
+                    // <div className="grid grid-cols-2 gap-4 w-96">
+                    <div className="flex flex-col gap-3 w-60">
                       {platformItems.map(platform => (
                         <Link 
                           key={platform.label} 
@@ -431,6 +441,31 @@ export default function Navbar() {
                             
                           />
                           {whyReput.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+
+
+                  {/* Resources */}
+                    {item.label === "Resources" && (
+                    <div className="flex flex-col gap-3 w-60">
+                      {resourcesItems.map(resources => (
+                        <Link 
+                          key={resources.label} 
+                          href={resources.href}
+                          prefetch={true} 
+                          className="flex items-center gap-2 p-3 hover:bg-[#E4FFE9] rounded-lg text-sm text-[#29442C]"
+                        >
+                          <Image 
+                            src={resources.image} 
+                            alt={resources.label} 
+                            width={38} 
+                            height={28} 
+                            className="rounded"
+                            
+                          />
+                          {resources.label}
                         </Link>
                       ))}
                     </div>
@@ -543,6 +578,45 @@ export default function Navbar() {
                           {platform.label}
                         </Link>
                       ))}
+
+
+                      {/* why reput */}
+
+                       {item.label === "Why RePut" && whyReputItems.map(whyReput => (
+                        <Link 
+                          key={whyReput.label} 
+                          href={whyReput.href}
+                          prefetch={true}
+                          className="flex items-center gap-3 p-3 hover:bg-[#E4FFE9] rounded-lg text-sm text-[#29442C]"
+                          onClick={toggleMobileMenu}
+                        >
+                          <Image 
+                            src={whyReput.image} 
+                            alt={whyReput.label} 
+                            width={24} 
+                            height={24} 
+                            className="rounded"
+                          />
+                          {whyReput.label}
+                        </Link>
+                      ))}
+
+
+                      {/* Resources */}
+
+                      {item.label === "Resources" && (resourcesItems.map(resources => (
+                        <Link
+                           key={resources.label}
+                            href={resources.href}
+                            prefetch={true}
+                            className="flex items-center gap-3 p-3 hover:bg-[#E4FFE9] rounded-lg text-sm text-[#29442C]"
+                            onClick={toggleMobileMenu} >
+                               <Image src={resources.image} alt={resources.label} width={24} height={24} className="rounded"/>
+                                {resources.label}
+                            </Link>
+                      )))}
+
+
                     </div>
                   )}
                 </div>
