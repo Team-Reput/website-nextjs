@@ -323,13 +323,17 @@ export default function ScheduleForm() {
       const selectedDateTime = `${selectedDate?.toDateString()} ${selectedTime}`;
       const submitData = { ...formData, subject: selectedDateTime };
 
-      const response = await fetch('https://reputinfo.life/submitdetails', {
+      const response = await fetch('https://api.reput.world/submitdetails', {
+      // const response = await fetch('http://localhost:80/submitdetails', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ details: submitData })
       });
 
+      console.log("submitData->", submitData);
+      
       const result = await response.json();
+      console.log("result->", result);
 
       if (result.submited) {
         setFormData({ name: '', email: '', message: '' });
