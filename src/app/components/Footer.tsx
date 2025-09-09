@@ -214,7 +214,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FaLinkedinIn, FaYoutube, FaInstagram } from "react-icons/fa";
+// import { FaLinkedinIn, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn} from "react-icons/fa";
 
 export default function Footer() {
   const locations = [
@@ -247,12 +248,12 @@ export default function Footer() {
             <Link href="https://www.linkedin.com/company/reput-ai"  aria-label="LinkedIn" className="hover:text-white">
               <FaLinkedinIn />
             </Link>
-            <Link href="#" aria-label="YouTube" className="hover:text-white">
+            {/* <Link href="#" aria-label="YouTube" className="hover:text-white">
               <FaYoutube />
             </Link>
             <Link href="#" aria-label="Instagram" className="hover:text-white">
               <FaInstagram />
-            </Link>
+            </Link> */}
           </div>
         </div>
 
