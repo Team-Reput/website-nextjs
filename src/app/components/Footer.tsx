@@ -292,7 +292,7 @@ export default function Footer() {
             <h3 className="mb-4 font-semibold">Features</h3>
             <ul className="space-y-2 text-sm">
               <li>Supply chain mapping</li>
-              <li>Nth Tier Tracebility</li>
+              <li>Nth Tier Traceability</li>
               <li>Magic Scan</li>
               <li>Bulk Upload</li>
               <li>ERP Integration</li>
