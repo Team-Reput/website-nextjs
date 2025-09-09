@@ -54,8 +54,8 @@ export default function PoliciesSection() {
   const officers = [
     {
       role: "Complaints Officer",
-      name: "Nitya Sivakumar",
-      email: "nitya@reput.co.in",
+      name: "Elakkiya Shree",
+      email: "Elakkiya@reput.co.in",
     },
     {
       role: "Grievance Officer",
