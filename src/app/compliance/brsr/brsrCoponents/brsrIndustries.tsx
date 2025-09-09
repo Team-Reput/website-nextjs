@@ -6,13 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 const industries = [
-  // {
-  //   title: "BRSR",
-  //   subtitle: "RePut.ai for",
-  //   image: "/brsrCard.png", // your image path
-  //   icon: "/brsrCard.png ", // your icon path
-  //   slug: "brsr",
-  // },
+ 
   {
     title: "CBAM",
     subtitle: "RePut.ai for",

@@ -137,7 +137,7 @@ export default function PoliciesSection() {
                   className="flex flex-col items-start justify-between gap-4 rounded-lg   bg-gray-50 p-6   md:flex-row md:items-center"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-md bg-black text-sm font-semibold text-white">
+                    <div className="flex h-8 w-21 items-center justify-center rounded-md bg-black text-sm font-semibold text-white">
                       {policy.id}
                     </div>
                     <div>

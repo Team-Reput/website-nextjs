@@ -539,7 +539,8 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex gap-8 text-[#29442C] font-bold">
+        {/* <div className="hidden lg:flex gap-8 text-[#29442C] font-bold"> */}
+        <div className="hidden lg:flex gap-5 text-[#29442C] font-bold">
           {navItems.map((item) => {
             const isActive = isActiveNavItem(item);
             

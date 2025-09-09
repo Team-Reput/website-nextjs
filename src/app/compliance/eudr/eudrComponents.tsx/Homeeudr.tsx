@@ -1,3 +1,5 @@
+
+
 "use client"
 
 import Image from "next/image";
@@ -11,7 +13,6 @@ export default function Homeeudr() {
       <div className="absolute left-1/2 top-1/2 w-[30%]  aspect-square rounded-full border border-dotted border-white opacity-50 -translate-x-1/2 -translate-y-1/2" />
 
 
-      {/* Floating Images */}
       <div className="absolute top-10 left-5 w-26 h-26 md:w-40 md:h-40">
         <Image
           src="/handeudr.png"
@@ -42,12 +43,10 @@ export default function Homeeudr() {
         />
       </div>
 
-      {/* Title */}
       <h1 className="text-2xl sm:text-3xl md:text-[54px] font-semibold text-center leading-snug z-10">
         What does the EU Deforestation
       </h1>
 
-      {/* Green Highlight Box */}
       <div className="mt-4 px-4 py-2 font-semibold bg-green-900/60 rounded-md shadow-lg border border-green-500 z-10 border-b-green-300 border-b-4">
         <span className="text-[50px] sm:text-xl md:text-2xl font-semibold text-white">
           Regulation Mean
@@ -58,11 +57,8 @@ export default function Homeeudr() {
       <h1 className="mt-3 text-lg sm:text-xl md:text-[46px] font-semibold text-center z-10">
         for your products & supply chains?
       </h1>
-
-      {/* Small text */}
-      {/* <p className="mt-6 text-[11.4px] sm:text-xs md:text-sm text-gray-400 text-center z-10 max-w-2xl">
-         for your products & supply chains?
-      </p> */}
+ 
     </div>
   );
 }
+
