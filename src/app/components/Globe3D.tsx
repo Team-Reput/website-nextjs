@@ -128,7 +128,8 @@ export default function Globe3D() {
       >
         <Image
           // src="/cbam2.png"
-          src="/cbamnew2.png"
+          // src="/cbamnew2.png"
+          src="/mvr.png"
           alt="cbam2"
           fill
           priority
@@ -143,12 +144,13 @@ export default function Globe3D() {
         style={{ bottom: "-24%", right: "-40%" }}
       >
         <Image
-          src="/c.png"
-          alt="c"
+          // src="/c.png"
+          src="/kekbk.png"
+          alt="csssl"
           fill
           priority
-          className="pointer-events-none select-none"
-          style={{ objectFit: "contain", transform: "scale(0.94)" }}
+          className="pointer-events-none select-none scale-[1.4]"
+          style={{ objectFit: "contain", transform: "scale(1.2)" }}
         />
       </div>
 
@@ -157,11 +159,12 @@ export default function Globe3D() {
         style={{ bottom: "50%", right: "-60%" }}
       >
         <Image
-          src="/ghgearth.png"
+          // src="/ghgearth.png"
+          src="/ghgcdd.png"
           alt="c"
           fill
           priority
-          className="pointer-events-none select-none"
+          className="pointer-events-none select-none scale-[1.4]"
           style={{ objectFit: "contain", transform: "scale(0.94)" }}
         />
       </div>

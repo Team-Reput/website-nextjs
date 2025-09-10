@@ -136,13 +136,14 @@ export default function Eudr() {
               w-[380px] h-[380px] md:w-[480px] md:h-[480px]
             "
           >
-            <div className="relative w-full h-full overflow-hidden bottom-18 right-8">
+            <div className="relative w-full h-full overflow-hidden bottom-18 right-20">
               <Image 
-                src="/eudrnew.png" 
+                // src="/eudrnew.png" 
+                src="/djeio.png" 
                 width={800} 
                 height={800} 
                 alt="EUDR compliance map"
-                className="object-contain"
+                className="object-contain scale-[1.2]"
               />
             </div>
           </motion.div>
