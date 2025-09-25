@@ -443,7 +443,7 @@ const navItems = [
   { label: "Resources", hasDropdown: true },
   { label: "About RePut", href: "/about" },
   // { label: "News", href: "/news" },
-  { label: "Policies", href: "/policie" }
+  { label: "Policies", href: "/policies" }
 ];
 
 const industriesItems = [

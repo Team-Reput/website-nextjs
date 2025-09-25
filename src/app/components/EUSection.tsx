@@ -272,7 +272,7 @@ export default function EUSection() {
           hover:scrollbar-thumb-[#2E7D32] scrollbar-thumb-rounded-full scroll-smooth"
         >
           <h4 className="text-lg sm:text-xl font-bold text-gray-900">
-            Why We Build RePut
+            Why We Built RePut
           </h4>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 leading-snug">
             Build For Making Companies <br className="hidden sm:block" /> Future Ready
