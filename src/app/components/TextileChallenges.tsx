@@ -220,7 +220,7 @@ export default function TextileChallenges() {
         {/* Left Text */}
         <div className="text-center md:text-left w-full md:w-2/3">
           <h2 className="text-black text-2xl sm:text-3xl md:text-4xl font-semibold leading-snug">
-            Build For{" "}
+            Built For{" "}
             <span className="text-green-600 font-bold">Every Step</span> <br />
             Proven at{" "}
             <span className="text-green-600 font-bold">Every Layer</span>
