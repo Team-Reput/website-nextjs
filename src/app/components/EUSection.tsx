@@ -275,7 +275,7 @@ export default function EUSection() {
             Why We Built RePut
           </h4>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 leading-snug">
-            Build For Making Companies <br className="hidden sm:block" /> Future Ready
+            Built For Making Companies <br className="hidden sm:block" /> Future Ready
           </h2>
           <p className="text-gray-700 text-sm sm:text-base mb-3 leading-relaxed">
             In today&apos;s world supply chain is more complex than ever full of
